@@ -81,3 +81,15 @@ The Scuderia Ferrari F1 will make fans filter car by year, find information rela
 [Back to Top](#table-of-contents)
 
 <a></a>
+
+### **User Requirements and Expectations**
+
+### Requirements
+
+* Easy to navigate by using the few buttons.
+* Nice dashboard with a functional overview.
+* Easy way to add a car info to the dashboard.
+* Easy way to search other users car.
+* Ability to edit and delete existing cars information.
+
+### Requirements
