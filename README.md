@@ -112,3 +112,7 @@ I have used [Coolors](https://coolors.co/ "Coolors.co") to come up with a color 
 <a></a>
 
 #### Fonts
+
+I have visited [Google fonts](https://fonts.google.com/) to explore and find the appropriate fonts to use. I have decide to use [Maven Pro](https://fonts.google.com/specimen/Maven+Pro) for the main text.
+
+#### Structure
