@@ -60,3 +60,16 @@ The Scuderia Ferrari F1 will make fans filter car by year, find information rela
 <a></a>
 
 ### **User Stories**
+
+* As a user, I would like to be able to register for the webiste and have my personal environment.
+* As a user, I would like to login after I created my account and see previous inserted information about F1 car.
+* As a user, I would like to have my persoanl profile with favourite car.
+* As a user, I want to be able to add car specs, race results, drivers and images for a specific car.
+* As a user, I would like to have a dashboard where I can  have a good overview.
+* As a user, i want to be able to search Ferrari F1 car by year to get specific car information.
+* As a user, I want to be able to add many cars information I want.
+* As a user, I want to have the possibility to edit info added or want to add/delete some info.
+* As a user, I want the website to be easy to use.
+* As a user, I want the process to add / edit / delete info to be easy.
+
+
