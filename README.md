@@ -72,4 +72,12 @@ The Scuderia Ferrari F1 will make fans filter car by year, find information rela
 * As a user, I want the website to be easy to use.
 * As a user, I want the process to add / edit / delete info to be easy.
 
+### **Site owners Goals**
 
+* To have an appealing website that Ferrari fans use to search their best car model, fast lap, race won ecc.
+* To have a great functionality and helps users to spend time on reading and looking info about their favourite F1 car.
+* To make the would personal by giving the user the possibility to add relevant information.
+
+[Back to Top](#table-of-contents)
+
+<a></a>
