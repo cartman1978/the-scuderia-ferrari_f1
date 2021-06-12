@@ -102,3 +102,13 @@ The Scuderia Ferrari F1 will make fans filter car by year, find information rela
 [Back to Top](#table-of-contents)
 
 <a></a>
+
+### **Design Choices**
+
+I have used [Coolors](https://coolors.co/ "Coolors.co") to come up with a color scheme that matches the Ferrari F1 Team. I have decided to keep the design, the background will be white and  just recall Ferrari logo colors for buttons and navigation. The reason for this is because for this project the functionalities is more important.
+
+![Color Palette](wireframes/color-palette.png)
+
+<a></a>
+
+#### Fonts
