@@ -150,9 +150,44 @@ See my wireframes below:
 * [Dashboard](wireframes/mobile-dashboard.jpg)
 * [Add Car](wireframes/mobile-addcar.jpg)
 
-#### Flowcharts
+### **Flowcharts**
 
 I created a flowchart for the login / register process in order to be more focused on each step to be done. I have used [Draw.io](https://app.diagrams.net/).
 Please see below:
 
 [Flowchart](wireframes/flowchart.jpg)
+
+### **Database Structure**
+
+I used [MongoDB](https://www.mongodb.com/) to set up the database for this project and below you can see the collectiuons:
+
+#### **Users:**
+
+Key      | Value
+---------|-----------
+_id      | ObjectId
+username | String
+password | String
+
+#### **Cars**
+
+Key             | Value
+----------------|-----------
+_id             | ObjectId
+user_id         | String
+car_name        | String
+car_image       | String
+car_design      | String
+car_engine      | String
+car_power       | String
+car_weight      | String
+car_drivers     | String
+num_race        | String
+car_wins        | String
+car_pod         | String
+fast_laps       | String
+car_description | String
+
+[Back to Top](#table-of-contents)
+
+<a></a>
