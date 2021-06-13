@@ -137,3 +137,8 @@ See my wireframes below:
 
 * [Dashboard](wireframes/desktop-dashboard.jpg)
 * [Add Car](wireframes/desktop-addcar.jpg)
+
+### **Tablet Wireframes**
+
+* [Dashboard](wireframes/tablet-dashboard.jpg)
+* [Add Car](wireframes/tablet-addcar.jpg)
