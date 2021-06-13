@@ -133,3 +133,7 @@ See my wireframes below:
 
 * [Home](wireframes/home.jpg)
 
+### **Desktop Wireframes**
+
+* [Dashboard](wireframes/desktop-dashboard.jpg)
+* [Add Car](wireframes/desktop-addcar.jpg)
