@@ -191,3 +191,20 @@ car_description | String
 [Back to Top](#table-of-contents)
 
 <a></a>
+
+---
+
+### **Features**
+----
+
+#### **Existing Features**
+
+* Registration functionality
+* Sign-In and Out functionality
+* Possibility to add more car per users
+* CRUD Functions:
+  * Create: user can add different car model
+  * Read: dashboard where user can view cars with specs and relative informatiom
+  * Update: user can update car specs
+  * Delete: user can delete car profile
+* Search car model by year
