@@ -131,5 +131,5 @@ I used [Balsamic](https://balsamiq.com/wireframes/) to create wireframes for my 
 
 See my wireframes below:
 
-* [Home](wireframes/mobile.jpg)
+* [Home](wireframes/home.jpg)
 
