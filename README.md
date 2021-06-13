@@ -151,3 +151,8 @@ See my wireframes below:
 * [Add Car](wireframes/mobile-addcar.jpg)
 
 #### Flowcharts
+
+I created a flowchart for the login / register process in order to be more focused on each step to be done. I have used [Draw.io](https://app.diagrams.net/).
+Please see below:
+
+[Flowchart](wireframes/flowchart.jpg)
