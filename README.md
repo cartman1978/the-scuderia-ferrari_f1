@@ -175,6 +175,7 @@ Key             | Value
 ----------------|-----------
 _id             | ObjectId
 user_id         | String
+car_year        | String
 car_name        | String
 car_image       | String
 car_design      | String
