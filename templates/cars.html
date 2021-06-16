@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Car Manager</title>
-</head>
-<body>
-    {% for car in cars %}
-       {{ car.car_year }}<br>
-       {{ car.car_name }}<br>
-       {{ car.car_image }}<br>
-      
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+
+<h2>I'm car extends</h2>
+{% for car in cars %}
+{{ car.car_year }}<br>
+{{ car.car_name }}<br>
+{{ car.car_image }}<br>
+{{ car.car_design }}<br>
+{{ car.car_engine }}<br>
+{{ car.car_power }}<br>
+{{ car.car_drivers }}<br>
+{{ car.num_race }}<br>
+{{ car.car_wins }}<br>
+{{ car.car_pod }}<br>
+{{ car.fast_laps }}<br>
+{{ car.car_description }}<br>
+
+{% endfor %}
+
+{% endblock %}
