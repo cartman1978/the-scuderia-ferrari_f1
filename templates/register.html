@@ -3,33 +3,19 @@
 
 <h4 class="center-align">Register for an account</h4>
 
-<div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-        <div class="card-panel">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-plus"></i>
-                    <input id="username" name="username" type="text" class="validate">
-                    <label for="username">Username</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-lock"></i>
-                    <input id="password" name="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                </div>
 
-            </div>
-            <class class="row">
-                <div class="col s12 m8">
-                    <button type="submit" class="reg-buttons">
-                        Register <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                </div>
-            </class>
-        </div>
-    </form>
-</div>
+<form class="row g-3" method="POST" action="{{ url_for('register') }}">
+    <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-12">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+</form>
 
 {% endblock %}
