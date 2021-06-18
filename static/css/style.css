@@ -1,12 +1,19 @@
 nav {
     background-color: #DA281C !important;
+    box-shadow: 0px 8px 12px -2px rgba(0, 0, 0, 0.5);
 }
 
-.text-shadow {
+.navbar-brand, .nav-link {
+    color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    ;
+    font-size: 1.2rem;
 }
 
-.mob-header {
-    color: #DA281C;
+.nav-link:hover, .navbar-brand:hover {
+    color: rgb(221, 216, 216);
+}
+
+.navbar-nav {
+    margin: auto;
+    margin-right: 1rem;
 }
