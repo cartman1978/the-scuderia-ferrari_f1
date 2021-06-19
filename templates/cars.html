@@ -7,7 +7,6 @@
 {{ car.car_name }}<br>
 {{ car.car_image }}<br>
 {{ car.car_design }}<br>
-{{ car.car_engine }}<br>
 {{ car.car_power }}<br>
 {{ car.car_drivers }}<br>
 {{ car.num_race }}<br>
@@ -15,6 +14,27 @@
 {{ car.car_pod }}<br>
 {{ car.fast_laps }}<br>
 {{ car.car_description }}<br>
+
+{% endfor %}
+
+{% for spec in specs %}
+
+{{ spec.spec_engine }}<br>
+{{ spec.car_power }}<br>
+{{ spec.trasmission }}<br>
+
+{% endfor %}
+
+{% for stat in stats %}
+
+{{ stat.races }}<br>
+{{ stat.wins }}<br>
+{{ stat.podiums }}<br>
+{{ stat.poles }}<br>
+{{ stat.fast_laps }}<br>
+{{ stat.constructor_champ }}<br>
+{{ stat.driver_champ }}<br>
+{{ stat.description }}<br>
 
 {% endfor %}
 
