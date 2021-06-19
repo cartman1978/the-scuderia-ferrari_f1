@@ -22,3 +22,18 @@ nav {
     margin: 3rem;
     color: #DA281C;
 }
+
+.btn-reg {
+    background-color: #DA281C;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 8rem;
+}
+
+.btn-reg:hover {
+    background-color: #fff;
+    color: #DA281C;
+    border: 1px solid #DA281C;
+}
