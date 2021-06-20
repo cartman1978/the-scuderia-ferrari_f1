@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="text-center reg-header">Register for an account</h4>
+<h4 class="text-center reg-header">Log In</h4>
 
 
-<form class="row g-3 " method="POST" action="{{ url_for('register') }}">
+<form class="row g-3 " method="POST" action="{{ url_for('login') }}">
     <div class="row justify-content-center">
         <div class="col-md-12 w-50">
-            <i class="fas fa-user-plus"></i>
+            <i class="fas fa-user-circle"></i>
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" minlength="5" maxlength="15"
                 pattern="^[a-zA-Z0-9]{5,15}$" required>
@@ -24,13 +24,14 @@
 
     </div>
     <div class="text-center">
-        <button type="submit" class="btn-reg">Sign in</button>
+        <button type="submit" class="btn-reg">Log In</button>
     </div>
 
     <div class="row justify-content-center mt-3">
         <div class="col-md-12 w-50">
             <p class="text-center">
-                Already have an Account? <a class="regLink" href="{{ url_for('login') }}">Log In</a>
+                Dont' have an Account? <a class="regLink" href="{{ url_for('register') }}">Create an
+                    Account</a>
             </p>
         </div>
     </div>

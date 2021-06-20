@@ -18,6 +18,10 @@ nav {
     margin-right: 1rem;
 }
 
+.fa-bars {
+    color: #fff;
+}
+
 .reg-header {
     margin: 3rem;
     color: #DA281C;
@@ -38,12 +42,16 @@ nav {
     border: 1px solid #DA281C;
 }
 
-input:focus {
+input:focus, button:focus {
     outline: 0px !important;
     -webkit-appearance: none;
     box-shadow: none !important;
 }
 
-.fa-user-circle, .fa-lock {
+.fa-user-plus, .fa-user-circle, .fa-lock {
+    color: #DA281C;
+}
+
+.regLink {
     color: #DA281C;
 }

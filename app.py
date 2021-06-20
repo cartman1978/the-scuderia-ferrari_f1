@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_cars")
+@app.route("/cars")
 def get_cars():
     cars = mongo.db.cars.find()
     specs = mongo.db.specs.find()
@@ -48,6 +48,32 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Account Registration Successfull!")
     return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check if username exist in the db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        
+        if existing_user:
+            # check if hashed password matches with user input
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                # invalid password
+                flash("Incorrect Username or Password")
+                return redirect(url_for("login"))
+        
+        else:
+            # invalid username
+            flash("Incorrect Username or Password")
+            return redirect(url_for("login"))
+        
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
