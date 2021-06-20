@@ -2,64 +2,58 @@
 {% block content %}
 
 
-<div class="row justify-content-center">
-    <!-- <div class="card mt-5" style="width: 58rem;"> -->
-    {% for car in cars %}
-    <img src="{{ car.car_image }}" class="card-img-top" alt="ferrari image">
-
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <ul class="list-group list-group-flush">
-
-                    <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
-                    <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
-                    <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
-                    {% endfor %}
-
-                    {% for spec in specs %}
-                    <li class="list-group-item"><strong>Engine</strong>: {{ spec.spec_engine }}</li>
-                    <li class="list-group-item"><strong>Power</strong>: {{ spec.car_power }}</li>
-                    <li class="list-group-item"><strong>Trasmission</strong>: {{ spec.trasmission }}</li>
-                    {% endfor %}
-                </ul>
+<div class="row row justify-content-center mt-4">
+    <div class="card carCard mb-3" style="max-width: 840px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                {% for car in cars %}
+                <img src="{{ car.car_image }}" class="imgCard" alt="ferrari image">
+                <h6 class="mt-5">Drivers</h6>
+                <p>{{ car.car_driver1 }}</p>
+                <p>{{ car.car_driver2 }}</p>
             </div>
-        </div>
-    </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
 
-    <div class="col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <ul class="list-group list-group-flush">
-                    {% for stat in stats %}
-                    <li class="list-group-item"><strong>Races</strong>: {{ stat.races }}</li>
-                    <li class="list-group-item"><strong>Wins</strong>: {{ stat.wins }}</li>
-                    <li class="list-group-item"><strong>Podiums</strong>: {{ stat.podiums }}</li>
-                    <li class="list-group-item"><strong>Poles</strong>: {{ stat.poles }}</li>
-                    <li class="list-group-item"><strong>Fast Laps</strong>: {{ stat.fast_laps }}</li>
-                    <li class="list-group-item"><strong>Constructor Championship</strong>: {{ stat.constructor_champ
-                        }}
-                    </li>
-                    <li class="list-group-item"><strong>Driver Championship</strong>: {{ stat.drivers_champ }}</li>
+                        <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
+                        <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
+                        <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
+                        {% endfor %}
+
+                        {% for spec in specs %}
+                        <li class="list-group-item"><strong>Engine</strong>: {{ spec.spec_engine }}</li>
+                        <li class="list-group-item"><strong>Power</strong>: {{ spec.car_power }}</li>
+                        <li class="list-group-item"><strong>Trasmission</strong>: {{ spec.trasmission }}</li>
+                        {% endfor %}
+
+                        <ul class="list-group list-group-flush">
+                            {% for stat in stats %}
+                            <li class="list-group-item"><strong>Races</strong>: {{ stat.races }}</li>
+                            <li class="list-group-item"><strong>Wins</strong>: {{ stat.wins }}</li>
+                            <li class="list-group-item"><strong>Podiums</strong>: {{ stat.podiums }}</li>
+                            <li class="list-group-item"><strong>Poles</strong>: {{ stat.poles }}</li>
+                            <li class="list-group-item"><strong>Fast Laps</strong>: {{ stat.fast_laps }}</li>
+                            <li class="list-group-item"><strong>Constructor Championship</strong>: {{
+                                stat.constructor_champ
+                                }}
+                            </li>
+                            <li class="list-group-item"><strong>Driver Championship</strong>: {{ stat.drivers_champ }}
+                            </li>
 
 
+                        </ul>
+                    </ul>
 
-                </ul>
+                </div>
+
             </div>
-            <!-- </div> -->
+            <div class="col-sm-12">
+                <li class="list-group-item"> {{ stat.description }}</li>
+            </div>
+            {% endfor %}
         </div>
-
-
-    </div>
-    <div class="col-sm-12">
-        <li class="list-group-item"> {{ stat.description }}</li>
-    </div>
-    {% endfor %}
-    <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
     </div>
 </div>
-
 
 {% endblock %}
