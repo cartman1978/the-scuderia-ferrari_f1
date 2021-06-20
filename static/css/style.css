@@ -60,6 +60,12 @@ input:focus, button:focus {
     color: #DA281C;
 }
 
-.card-body {
+/* .card-body {
     background-color: #F0E844;
+} */
+
+.card-img-top {
+    padding: 5rem;
+    height: 37rem;
+    width: 100%;
 }

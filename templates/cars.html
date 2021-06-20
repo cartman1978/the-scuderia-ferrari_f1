@@ -2,54 +2,64 @@
 {% block content %}
 
 
-{% for car in cars %}
-{{ car.car_year }}<br>
-{{ car.car_name }}<br>
-{{ car.car_image }}<br>
-{{ car.car_design }}<br>
-
-{% endfor %}
-
-{% for spec in specs %}
-
-{{ spec.spec_engine }}<br>
-{{ spec.car_power }}<br>
-{{ spec.trasmission }}<br>
-
-{% endfor %}
-
-{% for stat in stats %}
-
-{{ stat.races }}<br>
-{{ stat.wins }}<br>
-{{ stat.podiums }}<br>
-{{ stat.poles }}<br>
-{{ stat.fast_laps }}<br>
-{{ stat.constructor_champ }}<br>
-{{ stat.driver_champ }}<br>
-{{ stat.description }}<br>
-
-{% endfor %}
-
 <div class="row justify-content-center">
-    <div class="card" style="width: 48rem;">
-        <img src="https://s1.cdn.autoevolution.com/images/news/gallery/ferrari-312t-the-forgotten-history-of-formula-ones-most-successful-car_6.jpg"
-            class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+    <!-- <div class="card mt-5" style="width: 58rem;"> -->
+    {% for car in cars %}
+    <img src="{{ car.car_image }}" class="card-img-top" alt="ferrari image">
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
+                    <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
+                    <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
+                    {% endfor %}
+
+                    {% for spec in specs %}
+                    <li class="list-group-item"><strong>Engine</strong>: {{ spec.spec_engine }}</li>
+                    <li class="list-group-item"><strong>Power</strong>: {{ spec.car_power }}</li>
+                    <li class="list-group-item"><strong>Trasmission</strong>: {{ spec.trasmission }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    {% for stat in stats %}
+                    <li class="list-group-item"><strong>Races</strong>: {{ stat.races }}</li>
+                    <li class="list-group-item"><strong>Wins</strong>: {{ stat.wins }}</li>
+                    <li class="list-group-item"><strong>Podiums</strong>: {{ stat.podiums }}</li>
+                    <li class="list-group-item"><strong>Poles</strong>: {{ stat.poles }}</li>
+                    <li class="list-group-item"><strong>Fast Laps</strong>: {{ stat.fast_laps }}</li>
+                    <li class="list-group-item"><strong>Constructor Championship</strong>: {{ stat.constructor_champ
+                        }}
+                    </li>
+                    <li class="list-group-item"><strong>Driver Championship</strong>: {{ stat.drivers_champ }}</li>
+
+
+
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
+
+
+    </div>
+    <div class="col-sm-12">
+        <li class="list-group-item"> {{ stat.description }}</li>
+    </div>
+    {% endfor %}
+    <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
 </div>
+
 
 {% endblock %}

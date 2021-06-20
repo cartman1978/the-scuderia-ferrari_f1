@@ -21,9 +21,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/cars")
 def get_cars():
-    cars = mongo.db.cars.find()
-    specs = mongo.db.specs.find()
-    stats = mongo.db.stats.find()
+    cars = list(mongo.db.cars.find())
+    specs = list(mongo.db.specs.find())
+    stats = list(mongo.db.stats.find())
     return render_template("cars.html", cars=cars, specs=specs, stats=stats)
 
 
