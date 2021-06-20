@@ -56,7 +56,7 @@ input:focus, button:focus {
     color: #DA281C;
 }
 
-.profileHeader {
+h3, .profileHeader {
     color: #DA281C;
 }
 

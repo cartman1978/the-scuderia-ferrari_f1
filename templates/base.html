@@ -32,7 +32,7 @@
                         <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">New Car</a>
+                        <a class="nav-link" href="{{ url_for('addcar') }}">New Car</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Manage Car</a>
