@@ -59,3 +59,7 @@ input:focus, button:focus {
 .profileHeader {
     color: #DA281C;
 }
+
+.card-body {
+    background-color: #F0E844;
+}
