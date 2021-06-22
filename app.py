@@ -100,8 +100,40 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/addcar")
+@app.route("/addcar", methods=["GET", "POST"])
 def addcar():
+    if request.method == "POST":
+        cars = {
+            "car_image": request.form.get("car_image"),
+            "car_year": request.form.get("car_year"),
+            "car_name": request.form.get("car_name"),
+            "car_design": request.form.get("car_design"),
+            "car_driver1": request.form.get("car_driver1"),
+            "car_driver2": request.form.get("car_driver2")
+        }
+        
+        specs = {
+            "spec_engine": request.form.get("spec_engine"),
+            "car_power": request.form.get("car_power"),
+            "trasmission": request.form.get("trasmission")
+        }
+        
+        stats = {
+            "races": request.form.get("races"),
+            "wins": request.form.get("wins"),
+            "podiums": request.form.get("podiums"),
+            "poles": request.form.get("poles"),
+            "fast_laps": request.form.get("fast_laps"),
+            "constructor_champ": request.form.get("constructor_champ"),
+            "drivers_champ": request.form.get("drivers_champ"),
+            "description": request.form.get("description")
+        }
+        
+        mongo.db.cars.insert_one(cars)
+        mongo.db.specs.insert_one(specs)
+        mongo.db.stats.insert_one(stats)
+        flash("Car Successfully Added")
+        return redirect(url_for("get_cars"))
     return render_template("addcar.html")
 
 
