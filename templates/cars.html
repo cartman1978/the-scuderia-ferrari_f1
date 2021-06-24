@@ -19,17 +19,28 @@
                         <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
 
                     </ul>
-                    {% for spec in specs %}
+
                     <ul class="list-group list-group-flush">
 
 
-                        <li class="list-group-item"><strong>Engine</strong>: {{ spec.spec_engine }}</li>
-                        <li class="list-group-item"><strong>Power</strong>: {{ spec.car_power }}</li>
-                        <li class="list-group-item"><strong>Trasmission</strong>: {{ spec.trasmission }}</li>
+                        <li class="list-group-item"><strong>Engine</strong>: {{ car.spec_engine }}</li>
+                        <li class="list-group-item"><strong>Power</strong>: {{ car.car_power }}</li>
+                        <li class="list-group-item"><strong>Trasmission</strong>: {{ car.trasmission }}</li>
+
+                        <li class="list-group-item"><strong>Races</strong>: {{ car.races }}</li>
+                        <li class="list-group-item"><strong>Wins</strong>: {{ car.wins }}</li>
+                        <li class="list-group-item"><strong>Podiums</strong>: {{ car.podiums }}</li>
+                        <li class="list-group-item"><strong>Poles</strong>: {{ car.poles }}</li>
+                        <li class="list-group-item"><strong>Fast Laps</strong>: {{ car.fast_laps }}</li>
+                        <li class="list-group-item"><strong>Constructor Championship</strong>: {{ car.constructor_champ
+                            }}</li>
+                        <li class="list-group-item"><strong>Driver Championship</strong>: {{ car.drivers_champ }}</li>
+                        <li class="list-group-item"><strong>Description</strong>: {{ car.description }}</li>
+
 
 
                     </ul>
-                    {% endfor %}
+
                 </div>
 
 

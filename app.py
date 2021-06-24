@@ -22,9 +22,7 @@ mongo = PyMongo(app)
 @app.route("/cars")
 def get_cars():
     cars = list(mongo.db.cars.find())
-    specs = list(mongo.db.specs.find())
-    stats = list(mongo.db.stats.find())
-    return render_template("cars.html", cars=cars, specs=specs, stats=stats)
+    return render_template("cars.html", cars=cars) 
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -109,16 +107,10 @@ def addcar():
             "car_name": request.form.get("car_name"),
             "car_design": request.form.get("car_design"),
             "car_driver1": request.form.get("car_driver1"),
-            "car_driver2": request.form.get("car_driver2")
-        }
-        
-        specs = {
+            "car_driver2": request.form.get("car_driver2"),
             "spec_engine": request.form.get("spec_engine"),
             "car_power": request.form.get("car_power"),
-            "trasmission": request.form.get("trasmission")
-        }
-        
-        stats = {
+            "trasmission": request.form.get("trasmission"),
             "races": request.form.get("races"),
             "wins": request.form.get("wins"),
             "podiums": request.form.get("podiums"),
@@ -128,10 +120,9 @@ def addcar():
             "drivers_champ": request.form.get("drivers_champ"),
             "description": request.form.get("description")
         }
+
         
         mongo.db.cars.insert_one(cars)
-        mongo.db.specs.insert_one(specs)
-        mongo.db.stats.insert_one(stats)
         flash("Car Successfully Added")
         return redirect(url_for("get_cars"))
     return render_template("addcar.html")
