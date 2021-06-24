@@ -118,7 +118,8 @@ def addcar():
             "fast_laps": request.form.get("fast_laps"),
             "constructor_champ": request.form.get("constructor_champ"),
             "drivers_champ": request.form.get("drivers_champ"),
-            "description": request.form.get("description")
+            "description": request.form.get("description"),
+            "created_by": session["user"]
         }
 
         
