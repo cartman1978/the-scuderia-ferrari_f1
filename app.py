@@ -129,6 +129,12 @@ def addcar():
     return render_template("addcar.html")
 
 
+@app.route("/editcar/<car_id>", methods=["GET", "POST"])
+def editcar(car_id):
+    car = mongo.db.cars.find_one({"_id": ObjectId(car_id)})
+    return render_template("editcar.html", car=car)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
