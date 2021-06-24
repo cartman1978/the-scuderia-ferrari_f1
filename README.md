@@ -178,16 +178,20 @@ user_id         | String
 car_year        | String
 car_name        | String
 car_image       | String
+car_driver1     | String
+car_driver2     | String
 car_design      | String
-car_engine      | String
+spec_engine     | String
 car_power       | String
-car_weight      | String
-car_drivers     | String
-num_race        | String
-car_wins        | String
-car_pod         | String
+trasmission     | String
+races           | String
+wins            | String
+podiums         | String
 fast_laps       | String
-car_description | String
+constructor_champ | String
+drivers_champ   | String
+description     | String
+
 
 [Back to Top](#table-of-contents)
 
