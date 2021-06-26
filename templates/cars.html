@@ -44,10 +44,11 @@
                 </div>
 
                 <div class="col-4">
-
+                    {% if session.user|lower == car.created_by|lower %}
                     <a href="" class="btn btn-danger m-2">Done</a>
                     <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger m-2"><i
                             class="far fa-edit"></i> Edit</a>
+                    {% endif %}
                 </div>
 
 

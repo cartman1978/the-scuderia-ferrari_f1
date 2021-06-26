@@ -131,6 +131,32 @@ def addcar():
 
 @app.route("/editcar/<car_id>", methods=["GET", "POST"])
 def editcar(car_id):
+    if request.method == "POST":
+        submit = {
+            "car_image": request.form.get("car_image"),
+            "car_year": request.form.get("car_year"),
+            "car_name": request.form.get("car_name"),
+            "car_design": request.form.get("car_design"),
+            "car_driver1": request.form.get("car_driver1"),
+            "car_driver2": request.form.get("car_driver2"),
+            "spec_engine": request.form.get("spec_engine"),
+            "car_power": request.form.get("car_power"),
+            "trasmission": request.form.get("trasmission"),
+            "races": request.form.get("races"),
+            "wins": request.form.get("wins"),
+            "podiums": request.form.get("podiums"),
+            "poles": request.form.get("poles"),
+            "fast_laps": request.form.get("fast_laps"),
+            "constructor_champ": request.form.get("constructor_champ"),
+            "drivers_champ": request.form.get("drivers_champ"),
+            "description": request.form.get("description"),
+            "created_by": session["user"]
+        }
+
+        
+        mongo.db.cars.update({"_id": ObjectId(car_id)}, submit)
+        flash("Car Successfully Updated")
+
     car = mongo.db.cars.find_one({"_id": ObjectId(car_id)})
     return render_template("editcar.html", car=car)
 
