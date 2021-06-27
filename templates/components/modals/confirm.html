@@ -1,0 +1,68 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div class="modal" id="type1">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Delete story</p>
+        </header>
+        <section class="modal-card-body">
+            You are about to delete this Car. Are you sure? This action cannot be undone!
+        </section>
+        <footer class="modal-card-foot">
+            <form method="POST" action="{{ url_for('deletecar', car_id=car._id) }}">
+                <p class="control">
+                    <button type="submit" placeholder="Delete story"
+                        class="button is-rounded is-info is-inverted is-small-mobile mb-6" name="action"
+                        aria-label="Delete story">Delete Car
+                    </button>
+                </p>
+            </form>
+            <div class="columns is-centered">
+                <div class="column cancel has-text-centered">
+                    <button class="cancel button is-rounded button is-info is-inverted is-small-mobile"
+                        aria-label="Cancel">Cancel</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="modal" id="type2">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Delete account</p>
+        </header>
+        <section class="modal-card-body">
+            Deleting your account also deletes your stories! Are you sure? You will be missed!
+        </section>
+        <footer class="modal-card-foot">
+            <form method="POST" action="">
+                <div class="field">
+                    <label class="label">Confirm password</label>
+                    <div class="control has-icons-left">
+                        <input id="confirm_password_to_delete" name="confirm_password_to_delete" type="password"
+                            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required title="6 or more characters">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <p class="help">Only letters (either case) and numbers, 6 or more characters</p>
+                    </div>
+                </div>
+                <p class="control">
+                    <button type="submit" placeholder="Delete account"
+                        class="button is-rounded is-info is-inverted is-small-mobile mb-6"
+                        aria-label="Delete account">Delete account
+                    </button>
+                </p>
+            </form>
+            <div class="columns is-centered">
+                <div class="column cancel has-text-centered">
+                    <button class="cancel button is-rounded button is-info is-inverted is-small-mobile"
+                        aria-label="Cancel">Cancel</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+{% endblock %}

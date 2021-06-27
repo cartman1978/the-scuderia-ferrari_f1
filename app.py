@@ -161,11 +161,12 @@ def editcar(car_id):
     return render_template("editcar.html", car=car)
 
 
-@app.route("/deletecar/<car_id>")
+@app.route("/deletecar/<car_id>", methods=["GET", "POST"])
 def deletecar(car_id):
     mongo.db.cars.remove({"_id": ObjectId(car_id)})
     flash("Car Successfully Deleted")
-    return redirect(url_for("get_cars"))
+    return redirect(url_for("get_cars", car_id=car_id))
+
 
 
 if __name__ == "__main__":

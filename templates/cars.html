@@ -1,5 +1,7 @@
-{% extends "base.html" %}
+{% extends 'layout/base.html' %}
 {% block content %}
+{% include 'components/navigation/navigation.html' %}
+
 
 <div class="row row justify-content-center mt-4">
     {% for car in cars %}
@@ -45,11 +47,16 @@
 
                 <div class="col-4">
                     {% if session.user|lower == car.created_by|lower %}
-                    <a href="{{ url_for('deletecar', car_id=car._id) }}" class="btn btn-danger m-1">Delete</a>
+                    <div class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"
+                        data-modal-type="type1" aria-label="Delete">Delete</div>
+                    {% include 'components/modals/confirm.html' %}
                     <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger m-1"><i
                             class="far fa-edit"></i> Edit</a>
                     {% endif %}
+
+
                 </div>
+
 
 
             </div>
