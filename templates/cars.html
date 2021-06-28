@@ -54,7 +54,7 @@
                                     class="fas fa-trash-alt"></i> Delete</a>
 
                             {% include 'components/modals/confirm.html' %}
-                            <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger mb-5"><i
+                            <a href="{{ url_for('editcar', car_id=car._id) }}" class="button mb-5" id="edit-btn"><i
                                     class="far fa-edit"></i> Edit</a>
                         </div>
                         {% endif %}

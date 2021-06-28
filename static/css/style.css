@@ -76,3 +76,9 @@ h3, .profileHeader {
     color: #DA281C;
     border: none;
 }
+
+#edit-btn {
+    background-color: #DA281C;
+    border: none;
+    color: #fff;
+}
