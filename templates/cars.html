@@ -2,74 +2,76 @@
 {% block content %}
 {% include 'components/navigation/navigation.html' %}
 
+<div class="container">
+    <div class="row row justify-content-center mt-4">
+        {% for car in cars %}
 
-<div class="row row justify-content-center mt-4">
-    {% for car in cars %}
+        <div class="card mb-3" style="max-width: 840px;">
 
-    <div class="card mb-3" style="max-width: 840px;">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="{{ car.car_image }}" class="imgCard" alt="ferrari image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
 
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="{{ car.car_image }}" class="imgCard" alt="ferrari image">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
+                            <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
+                            <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
 
-                        <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
-                        <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
-                        <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
+                        </ul>
 
-                    </ul>
-
-                    <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush">
 
 
-                        <li class="list-group-item"><strong>Engine</strong>: {{ car.spec_engine }}</li>
-                        <li class="list-group-item"><strong>Power</strong>: {{ car.car_power }}</li>
-                        <li class="list-group-item"><strong>Trasmission</strong>: {{ car.trasmission }}</li>
+                            <li class="list-group-item"><strong>Engine</strong>: {{ car.spec_engine }}</li>
+                            <li class="list-group-item"><strong>Power</strong>: {{ car.car_power }}</li>
+                            <li class="list-group-item"><strong>Trasmission</strong>: {{ car.trasmission }}</li>
 
-                        <li class="list-group-item"><strong>Races</strong>: {{ car.races }}</li>
-                        <li class="list-group-item"><strong>Wins</strong>: {{ car.wins }}</li>
-                        <li class="list-group-item"><strong>Podiums</strong>: {{ car.podiums }}</li>
-                        <li class="list-group-item"><strong>Poles</strong>: {{ car.poles }}</li>
-                        <li class="list-group-item"><strong>Fast Laps</strong>: {{ car.fast_laps }}</li>
-                        <li class="list-group-item"><strong>Constructor Championship</strong>: {{ car.constructor_champ
-                            }}</li>
-                        <li class="list-group-item"><strong>Driver Championship</strong>: {{ car.drivers_champ }}</li>
-                        <li class="list-group-item"><strong>Description</strong>: {{ car.description }}</li>
+                            <li class="list-group-item"><strong>Races</strong>: {{ car.races }}</li>
+                            <li class="list-group-item"><strong>Wins</strong>: {{ car.wins }}</li>
+                            <li class="list-group-item"><strong>Podiums</strong>: {{ car.podiums }}</li>
+                            <li class="list-group-item"><strong>Poles</strong>: {{ car.poles }}</li>
+                            <li class="list-group-item"><strong>Fast Laps</strong>: {{ car.fast_laps }}</li>
+                            <li class="list-group-item"><strong>Constructor Championship</strong>: {{
+                                car.constructor_champ
+                                }}</li>
+                            <li class="list-group-item"><strong>Driver Championship</strong>: {{ car.drivers_champ }}
+                            </li>
+                            <li class="list-group-item"><strong>Description</strong>: {{ car.description }}</li>
 
-                        <p><em>by: {{ car.created_by }}</em></p>
+                            <p><em>by: {{ car.created_by }}</em></p>
 
-                    </ul>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-4">
+                        {% if session.user|lower == car.created_by|lower %}
+                        <div class="button" data-modal-type="type1" aria-label="Delete">Delete</div>
+
+                        {% include 'components/modals/confirm.html' %}
+                        <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger m-1"><i
+                                class="far fa-edit"></i> Edit</a>
+                        {% endif %}
+
+
+                    </div>
+
+
 
                 </div>
-
-                <div class="col-4">
-                    {% if session.user|lower == car.created_by|lower %}
-                    <div class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"
-                        data-modal-type="type1" aria-label="Delete">Delete</div>
-                    {% include 'components/modals/confirm.html' %}
-                    <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger m-1"><i
-                            class="far fa-edit"></i> Edit</a>
-                    {% endif %}
-
-
-                </div>
-
-
 
             </div>
 
         </div>
 
+        {% endfor %}
+
+
     </div>
 
-    {% endfor %}
-
-
 </div>
-
-
 
 {% endblock %}
