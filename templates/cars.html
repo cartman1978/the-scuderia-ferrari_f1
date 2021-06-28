@@ -9,7 +9,7 @@
         <div class="card mb-3" style="max-width: 840px;">
 
             <div class="row g-0">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <img src="{{ car.car_image }}" class="imgCard" alt="ferrari image">
                 </div>
                 <div class="col-md-8">
@@ -49,11 +49,14 @@
 
                     <div class="col-4">
                         {% if session.user|lower == car.created_by|lower %}
-                        <div class="button" data-modal-type="type1" aria-label="Delete">Delete</div>
+                        <div class="buttons">
+                            <a class="button mb-5" id="delete-btn" data-modal-type="type1" aria-label="Delete"><i
+                                    class="fas fa-trash-alt"></i> Delete</a>
 
-                        {% include 'components/modals/confirm.html' %}
-                        <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger m-1"><i
-                                class="far fa-edit"></i> Edit</a>
+                            {% include 'components/modals/confirm.html' %}
+                            <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger mb-5"><i
+                                    class="far fa-edit"></i> Edit</a>
+                        </div>
                         {% endif %}
 
 
