@@ -47,19 +47,21 @@
 
                     </div>
 
-                    <div class="col-4">
-                        {% if session.user|lower == car.created_by|lower %}
-                        <div class="buttons">
 
-                            <a id="myBtn" class="button mb-5"><i class="fas fa-trash-alt"></i> Delete</a>
-                            {% include 'components/modals/confirm.html' %}
-                            <a href="{{ url_for('editcar', car_id=car._id) }}" class="button mb-5" id="edit-btn"><i
-                                    class="far fa-edit"></i> Edit</a>
-                        </div>
-                        {% endif %}
+                    {% if session.user|lower == car.created_by|lower %}
 
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a id="myBtn" class="btn btn-danger"><i class=" fas fa-trash-alt"></i> Delete</a>
+                        {% include 'components/modals/confirm.html' %}
+                        <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger" id="edit-btn"><i
+                                class="far fa-edit"></i> Edit</a>
 
                     </div>
+
+                    {% endif %}
+
+
+
 
 
 
