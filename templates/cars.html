@@ -50,9 +50,8 @@
                     <div class="col-4">
                         {% if session.user|lower == car.created_by|lower %}
                         <div class="buttons">
-                            <a class="button mb-5" id="delete-btn" data-modal-type="type1" aria-label="Delete"><i
-                                    class="fas fa-trash-alt"></i> Delete</a>
 
+                            <a id="myBtn" class="button mb-5"><i class="fas fa-trash-alt"></i> Delete</a>
                             {% include 'components/modals/confirm.html' %}
                             <a href="{{ url_for('editcar', car_id=car._id) }}" class="button mb-5" id="edit-btn"><i
                                     class="far fa-edit"></i> Edit</a>

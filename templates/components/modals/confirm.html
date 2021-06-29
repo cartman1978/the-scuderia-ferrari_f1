@@ -1,31 +1,34 @@
 {% extends 'layout/base.html' %}
 {% block content %}
-<div class="modal" id="type1">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Delete story</p>
-        </header>
-        <section class="modal-card-body">
-            You are about to delete this Car. Are you sure? This action cannot be undone!
-        </section>
-        <footer class="modal-card-foot">
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <h3 class="modal-title">Delete your Car</h3>
+
+        </div>
+        <div class="modal-body">
+            <p>You are about to delete this Car. Are you sure? This action cannot be undone!</p>
+        </div>
+        <div class="modal-footer">
             <form method="POST" action="{{ url_for('deletecar', car_id=car._id) }}">
                 <p class="control">
-                    <button type="submit" placeholder="Delete story"
-                        class="button is-rounded is-info is-inverted is-small-mobile mb-6" name="action"
-                        aria-label="Delete story">Delete Car
-                    </button>
+                    <a type="submit" placeholder="Delete story" class="btn btn-danger m-1" name="action"
+                        aria-label="Delete story"><i class="far fa-trash-alt"></i> Delete Car
+                    </a>
                 </p>
             </form>
-            <div class="columns is-centered">
-                <div class="column cancel has-text-centered">
-                    <button class="cancel button is-rounded button is-info is-inverted is-small-mobile"
-                        aria-label="Cancel">Cancel</button>
-                </div>
+            <div class="modal-footer">
+
+                <a href="{{ url_for('get_cars', car_id=car._id) }}" class="btn btn-danger m-1"><i
+                        class="fas fa-times-circle"></i> Return</a>
+
             </div>
-        </footer>
+        </div>
     </div>
+
 </div>
 
 {% endblock %}
