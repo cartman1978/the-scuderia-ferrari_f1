@@ -14,18 +14,15 @@
         </div>
         <div class="modal-footer">
             <form method="POST" action="{{ url_for('deletecar', car_id=car._id) }}">
-                <p class="control">
-                    <a type="submit" placeholder="Delete story" class="btn btn-danger m-1" name="action"
-                        aria-label="Delete story"><i class="far fa-trash-alt"></i> Delete Car
-                    </a>
-                </p>
-            </form>
-            <div class="modal-footer">
 
-                <a href="{{ url_for('get_cars', car_id=car._id) }}" class="btn btn-danger m-1"><i
+                <a type="submit" placeholder="Delete story" class="btn btn-danger" name="action"
+                    aria-label="Delete story"><i class="far fa-trash-alt"></i> Delete Car
+                </a>
+                <a href="{{ url_for('get_cars', car_id=car._id) }}" class="btn btn-danger"><i
                         class="fas fa-times-circle"></i> Return</a>
 
-            </div>
+            </form>
+
         </div>
     </div>
 

@@ -132,3 +132,8 @@ h3, .profileHeader {
     text-decoration: none;
     cursor: pointer;
 }
+
+.modal-body {
+    border: 2px solid #000;
+    border-radius: 0.6rem;
+}
