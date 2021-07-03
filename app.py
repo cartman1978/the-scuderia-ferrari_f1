@@ -22,7 +22,9 @@ mongo = PyMongo(app)
 @app.route("/cars")
 def get_cars():
     cars = list(mongo.db.cars.find())
-    return render_template("cars.html", cars=cars) 
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("cars.html", cars=cars, username=username) 
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -84,11 +86,13 @@ def profile(username):
     # get session user's username from the db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    cars = list(mongo.db.cars.find())
+    cars = list(mongo.db.cars.find().sort('_id', 1))
     if session["user"]:
         return render_template("profile.html", username=username, cars=cars)
     
     return redirect(url_for("login"))
+
+
 
 @app.route("/logout")
 def logout():
