@@ -64,12 +64,11 @@
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
 
-                                <div class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"
-                                    data-modal-type="type1" aria-label="Delete"><i class=" fas fa-trash-alt"></i> Delete
+                                <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete"
+                                    id="edit-btn"><i class=" fas fa-trash-alt"></i> Delete
                                 </div>
 
-                                <a href="{{ url_for('editcar', car_id=car._id) }}"
-                                    class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"
+                                <a href="{{ url_for('editcar', car_id=car._id) }}" class="button is-danger is-rounded"
                                     id="edit-btn"><i class="far fa-edit"></i> Edit</a>
 
                                 {% include 'components/modals/confirm.html' %}
