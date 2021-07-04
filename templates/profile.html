@@ -20,7 +20,9 @@
     <div class="row row justify-content-center mt-4">
         {% for car in cars %}
 
+
         {% if session.user|lower == car.created_by|lower %}
+
 
         <div class="card mb-3" style="max-width: 840px;">
 
@@ -59,22 +61,27 @@
 
                             <p><em>by: {{ car.created_by }}</em></p>
 
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+
+                                <div class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"
+                                    data-modal-type="type1" aria-label="Delete"><i class=" fas fa-trash-alt"></i> Delete
+                                </div>
+
+                                <a href="{{ url_for('editcar', car_id=car._id) }}"
+                                    class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"
+                                    id="edit-btn"><i class="far fa-edit"></i> Edit</a>
+
+                                {% include 'components/modals/confirm.html' %}
+
+                            </div>
                         </ul>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <a id="myBtn" class="btn btn-danger"><i class=" fas fa-trash-alt"></i> Delete</a>
 
-                            <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger" id="edit-btn"><i
-                                    class="far fa-edit"></i> Edit</a>
 
-                        </div>
-                        {% include 'components/modals/confirm.html' %}
+
+
 
                     </div>
-
-
-
-
-
 
 
 
@@ -83,6 +90,7 @@
             </div>
 
         </div>
+
         {% endif %}
 
         {% endfor %}

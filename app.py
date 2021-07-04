@@ -17,20 +17,39 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# MongoDb collection variables
+user_coll = mongo.db.users
+cars_coll = mongo.db.cars
+
 
 @app.route("/")
-@app.route("/cars")
 def get_cars():
-    cars = list(mongo.db.cars.find())
+    """
+    Function to render the home page and shows the 
+    the existing cars. Newest cars are shown first
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    cars = cars_coll.find().sort('_id', -1)
     return render_template("cars.html", cars=cars, username=username) 
+
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Function to allow user to register at the website
+    Check if username exists in db
+    Redirect user to the dashboard
+    """
+    
+    # Check if user is already logged in
+    if 'user' in session:
+        flash('You are already Registered')
+        return redirect(url_for(get_cars))
+    
     if request.method == "POST":
-        # Check if username exists in db
+        
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         
@@ -38,11 +57,13 @@ def register():
             flash("Username already in use")
             return redirect(url_for("register"))
         
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
+        username = request.form.get("username").lower()
+        password = generate_password_hash(request.form.get("password"))
+        
+        
+        mongo.db.users.insert_one({
+            'username': username,
+            'password': password})
         
         # put new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
@@ -54,6 +75,10 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Allows user to sign in with username and password
+    Redirects user to profile
+    """
     if request.method == "POST":
         # check if username exist in the db
         existing_user = mongo.db.users.find_one(
@@ -96,6 +121,10 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    """
+    Allows the user to log out
+    Takes user back to home
+    """
     # rmove user from session cookies
     flash("You're now logged out")
     session.pop("user")
