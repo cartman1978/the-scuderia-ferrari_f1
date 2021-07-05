@@ -213,3 +213,18 @@ description     | String
   * Update: user can update car specs
   * Delete: user can delete car profile
 * Search car model by year
+
+#### **Features to be implemented**
+
+* Currently the user can only insert image url. In the future I would like that the user can upload an image from its computer and/or cloud accounts.
+* Have a user profile with image/avatar and facts from the user.
+* Have a 'forget password' functionality.
+* Have a confirm password to make sure the user has chosen the password he/she wanted.
+* Add pagination so the list of the cars will be display with a max of 10 per page.
+* Add a graph overview page for the car stats.
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+---
