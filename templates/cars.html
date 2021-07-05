@@ -3,6 +3,21 @@
 {% include 'components/navigation/navigation.html' %}
 
 <div class="container">
+    <div class="input-group justify-content-center mt-4">
+        <form action="{{ url_for('search') }}" method="POST">
+            <div class="form-outline">
+
+                <input type="text" name="query" id="query" minlength="2" class="form-control" required />
+                <label class="form-label" for="query">Search</label>
+
+            </div>
+        </form>
+        <a type="submit" class="btn btn-primary" id="btn-search">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+
+    {% if car|length >= 0 %}
     <div class="row row justify-content-center mt-4">
         {% for car in cars %}
 
@@ -44,6 +59,7 @@
                             <p><em>Created by: {{ car.created_by }}</em></p>
 
                         </ul>
+
                         {% if session.user|lower == car.created_by|lower %}
 
 
@@ -77,8 +93,13 @@
 
         {% endfor %}
 
-
     </div>
+
+    {% else %}
+    <h3 class="text-center profileHeader">
+        No Car Found for this year
+    </h3>
+    {% endif %}
 
 </div>
 

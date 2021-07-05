@@ -122,22 +122,9 @@ h3, .profileHeader {
     background-color: #F0E844;
 }
 
-/* The Close Button */
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
+#btn-search {
+    height: 2.4rem;
+    background-color: #DA281C;
+    border: none;
     cursor: pointer;
-}
-
-.modal-body {
-    border: 2px solid #000;
-    border-radius: 0.6rem;
 }

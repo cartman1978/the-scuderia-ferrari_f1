@@ -34,6 +34,13 @@ def get_cars():
 
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    cars = cars_coll.find({"$text": {"$search": query}}).sort('_id', -1)
+    return render_template("cars.html", cars=cars) 
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
