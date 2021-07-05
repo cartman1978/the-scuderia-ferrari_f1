@@ -208,6 +208,26 @@ def deletecar(car_id):
 
 
 
+@app.errorhandler(404)
+def page_not_found(error):
+    """
+    Renders a custom 404 error page with a button
+    that takes the user back home
+    """
+    return render_template("/components/errors/404.html", error=error), 404
+
+
+
+@app.errorhandler(500)
+def something_went_wrong(error):
+    """
+    Renders a custom 500 error page with a button
+    that takes the user back home
+    """
+    return render_template("/components/errors/500.html", error=error), 500
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
