@@ -228,3 +228,37 @@ description     | String
 <a></a>
 
 ---
+
+### **Technologies used**
+----
+#### **Languages**
+
+### Languages ###
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JS](https://nl.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+
+### Libraries and Frameworks ###
+
+- [Font Awesome](https://fontawesome.com/)
+- [Bootsrap](https://getbootstrap.com/)
+- [Bulma](https://bulma.io/)
+- [Google Fonts](https://fonts.google.com/)
+- [jQuery](https://jquery.com/)
+
+### Tools ###
+
+- [Git](https://git-scm.com/)
+- [GitPod](https://www.gitpod.io/)
+- [Heroku](https://www.heroku.com/)
+- [PEP8](http://pep8online.com/)
+- [W3C HTML Validation Service](https://validator.w3.org/)
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [MongoDB Atlas](https://www.mongodb.com/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [PyMongo](https://api.mongodb.com/python/current/tutorial.html)
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+- [Heroku](https://www.heroku.com/)
+- [Github](https://github.com/)
