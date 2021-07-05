@@ -18,9 +18,9 @@
         </a>
     </div>
 
-
+    {% if cars.count() > 0 %}
     <div class="row row justify-content-center mt-4">
-        {% if cars.count() > 0 %}
+
         {% for car in cars %}
 
         <div class="card mb-3" style="max-width: 840px;">
@@ -60,25 +60,25 @@
 
                             <p><em>Created by: {{ car.created_by }}</em></p>
 
+
+                            {% if session.user|lower == car.created_by|lower %}
+
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete"
+                                    id="edit-btn"><i class=" fas fa-trash-alt"></i> Delete
+                                </div>
+
+                                <a href="{{ url_for('editcar', car_id=car._id) }}" class="button is-danger is-rounded"
+                                    id="edit-btn"><i class="far fa-edit"></i> Edit</a>
+
+                                {% include 'components/modals/confirm.html' %}
+                            </div>
+                            {% endif %}
+
                         </ul>
 
-                        {% if session.user|lower == car.created_by|lower %}
-
-
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete"
-                                id="edit-btn"><i class=" fas fa-trash-alt"></i> Delete
-                            </div>
-
-                            <a href="{{ url_for('editcar', car_id=car._id) }}" class="button is-danger is-rounded"
-                                id="edit-btn"><i class="far fa-edit"></i> Edit</a>
-
-                            {% include 'components/modals/confirm.html' %}
-                        </div>
-
                     </div>
-
-                    {% endif %}
 
                 </div>
 
@@ -86,25 +86,14 @@
 
         </div>
 
-
         {% endfor %}
 
-        {% else %}
-        <h3 class="text-center">
-            No Car Found for this year
-        </h3>
-        {% endif %}
     </div>
-
-
-
+    {% else %}
+    <h3 class="text-center">
+        No Car Found for this year
+    </h3>
+    {% endif %}
 </div>
-
-
-
-
-
-
-
 
 {% endblock %}
