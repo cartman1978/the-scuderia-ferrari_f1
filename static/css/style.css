@@ -110,12 +110,16 @@ h3, .profileHeader {
 
 /* Modal Content */
 
-.modal-content {
+.modal {
     background-color: #F0E844;
     margin: auto;
     padding: 30px;
     border: 1px solid #000;
     width: 80%;
+}
+
+.modal-card-head, .modal-card-body, .modal-card-foot {
+    background-color: #F0E844;
 }
 
 /* The Close Button */

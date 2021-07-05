@@ -4,27 +4,24 @@
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
-            <p class="modal-card-title">Delete story</p>
+            <p class="modal-card-title">Delete F1 Car</p>
         </header>
         <section class="modal-card-body">
-            You are about to delete this story. Are you sure? This action cannot be undone!
+            You are about to delete this car. Are you sure? This action cannot be undone!
         </section>
         <footer class="modal-card-foot">
             <form method="POST" action="{{ url_for('deletecar', car_id=car._id) }}">
                 <p class="control">
-                    <a type="submit" placeholder="Delete story"
-                        class="button is-rounded is-info is-inverted is-small-mobile has-text-centered" name="action"
+                    <a type="submit" placeholder="Delete story" class="button is-danger is-rounded " name="action"
                         aria-label="Delete story"><i class="far fa-trash-alt"></i> Delete Car
                     </a>
-                    <a href="{{ url_for('get_cars', car_id=car._id) }}"
-                        class="button is-rounded is-info is-inverted is-small-mobile has-text-centered"><i
+                    <a href="{{ url_for('get_cars', car_id=car._id) }}" class="button is-danger is-rounded"><i
                             class="fas fa-times-circle"></i> Return</a>
                 </p>
             </form>
             <div class="columns is-centered">
                 <div class="column cancel has-text-centered">
-                    <button class="cancel button is-rounded button is-info is-inverted is-small-mobile"
-                        aria-label="Cancel">Cancel</button>
+                    <button class="cancel button is-danger is-rounded ml-1" aria-label="Cancel">Cancel</button>
                 </div>
             </div>
         </footer>
