@@ -41,7 +41,7 @@
                             </li>
                             <li class="list-group-item"><strong>Description</strong>: {{ car.description }}</li>
 
-                            <p><em>by: {{ car.created_by }}</em></p>
+                            <p><em>Created by: {{ car.created_by }}</em></p>
 
                         </ul>
                         {% if session.user|lower == car.created_by|lower %}
