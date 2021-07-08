@@ -1,0 +1,86 @@
+<div class="card is-fullwidth mt-5">
+
+    <div class="card-content">
+        <p> <strong>Created By:</strong>
+            {{ car.created_by }}
+        </p>
+        <div class="media">
+
+            <div class="media-left">
+
+                <figure class="image is-96x96">
+                    <img src="{{ car.car_image }}" alt="ferrari f1">
+                </figure>
+            </div>
+            <div class="media-content">
+                <p class="title is-4">{{ car.car_name }}</p>
+                <p class="subtitle is-6">{{ car.car_year }}</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="columns is-mobile">
+                <div class="column">
+                    <p> <strong>Designers:</strong>
+                        {{ car.car_design }}
+                    </p>
+                    <p> <strong>Engine:</strong>
+                        {{ car.spec_engine }}
+                    </p>
+                    <p> <strong>Power:</strong>
+                        {{ car.car_power }}
+                    </p>
+                    <p> <strong>Trasmission:</strong>
+                        {{ car.trasmission }}
+                    </p>
+                    <p> <strong>Races:</strong>
+                        {{ car.races}}
+                    </p>
+                    <p> <strong>Wins:</strong>
+                        {{ car.wins }}
+                    </p>
+                </div>
+                <div class="column">
+                    <p> <strong>Podiums:</strong>
+                        {{ car.podiums }}
+                    </p>
+                    <p> <strong>Poles:</strong>
+                        {{ car.poles }}
+                    </p>
+                    <p> <strong>Fast Laps:</strong>
+                        {{ car.fast_laps }}
+                    </p>
+                    <p> <strong>Constructor Title:</strong>
+                        {{ car.constructor_champ }}
+                    </p>
+                    <p> <strong>Drivers Title:</strong>
+                        {{ car.drivers_champ }}
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="container">
+
+
+                {% if session.user|lower == car.created_by|lower %}
+
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete" id="edit-btn">
+                        <i class=" fas fa-trash-alt"></i> Delete
+                    </div>
+
+                    <a href="{{ url_for('editcar', car_id=car._id) }}" class="button is-danger is-rounded"
+                        id="edit-btn"><i class="far fa-edit"></i> Edit</a>
+
+                    {% include 'components/modals/confirm.html' %}
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
