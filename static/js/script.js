@@ -8,6 +8,10 @@ $(document).ready(function () {
 });
 
 
-
-
+$(document).ready(function () {
+    $("button").click(function () {
+        $('.hidden').hide();
+        $(this).next().toggle();
+    });
+});
 

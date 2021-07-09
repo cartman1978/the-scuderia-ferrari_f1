@@ -39,6 +39,8 @@
                     <p> <strong>Wins:</strong>
                         {{ car.wins }}
                     </p>
+
+
                 </div>
                 <div class="column">
                     <p> <strong>Podiums:</strong>
@@ -56,11 +58,11 @@
                     <p> <strong>Drivers Title:</strong>
                         {{ car.drivers_champ }}
                     </p>
-                    <p>
-                        {{ car.description }}
-                    </p>
+
 
                 </div>
+
+
 
 
             </div>
@@ -70,6 +72,12 @@
 
 
             <div class="container">
+                <button class="button is-danger is-rounded">Description</button>
+
+
+                <div class="hidden" style="display:none">
+                    <p>{{ car.description }}</p>
+                </div>
 
 
 
