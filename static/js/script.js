@@ -4,7 +4,10 @@ $(document).ready(function () {
         var Type = $(this).data("modal-type");
         $("#" + Type).addClass("is-active");
     });
+
 });
+
+
 
 
 

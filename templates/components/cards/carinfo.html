@@ -56,17 +56,25 @@
                     <p> <strong>Drivers Title:</strong>
                         {{ car.drivers_champ }}
                     </p>
-
+                    <p>
+                        {{ car.description }}
+                    </p>
 
                 </div>
 
 
             </div>
 
+
+
+
+
             <div class="container">
 
 
+
                 {% if session.user|lower == car.created_by|lower %}
+
 
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -84,3 +92,4 @@
             </div>
         </div>
     </div>
+</div>
