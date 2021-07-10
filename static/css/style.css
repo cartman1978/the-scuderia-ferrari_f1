@@ -145,3 +145,7 @@ h3, .profileHeader {
     margin-top: 2rem;
     background-color: #DA281C;
 }
+
+.hidden {
+    display: none;
+}
