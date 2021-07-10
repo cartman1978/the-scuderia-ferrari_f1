@@ -30,7 +30,7 @@ def get_cars():
     """
     
     cars = cars_coll.find().sort('_id', -1)
-    return render_template("cars.html", cars=cars) 
+    return render_template("pages/cars.html", cars=cars) 
 
 
 
@@ -76,7 +76,7 @@ def register():
         flash("Account Registration Successfull!")
         return redirect(url_for("profile", username=session["user"]))
     
-    return render_template("register.html")
+    return render_template("pages/register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -109,7 +109,7 @@ def login():
             flash("Incorrect Username or Password")
             return redirect(url_for("login"))
         
-    return render_template("login.html")
+    return render_template("pages/login.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -119,7 +119,7 @@ def profile(username):
         {"username": session["user"]})["username"]
     cars = list(mongo.db.cars.find().sort('_id', 1))
     if session["user"]:
-        return render_template("profile.html", username=username, cars=cars)
+        return render_template("pages/profile.html", username=username, cars=cars)
     
     return redirect(url_for("login"))
 
@@ -165,7 +165,7 @@ def addcar():
         mongo.db.cars.insert_one(cars)
         flash("Car Successfully Added")
         return redirect(url_for("get_cars"))
-    return render_template("addcar.html")
+    return render_template("pages/addcar.html")
 
 
 @app.route("/editcar/<car_id>", methods=["GET", "POST"])
@@ -197,7 +197,7 @@ def editcar(car_id):
         flash("Car Successfully Updated")
 
     car = mongo.db.cars.find_one({"_id": ObjectId(car_id)})
-    return render_template("editcar.html", car=car)
+    return render_template("pages/editcar.html", car=car)
 
 
 @app.route("/deletecar/<car_id>", methods=["GET", "POST"])
