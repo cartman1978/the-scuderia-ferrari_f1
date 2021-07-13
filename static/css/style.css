@@ -162,3 +162,12 @@ h3, .profileHeader {
 .hidden {
     display: none;
 }
+
+.navbar-burger {
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.navbar-end {
+    background-color: #DA281C;
+}
