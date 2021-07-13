@@ -12,9 +12,9 @@
         <footer class="modal-card-foot">
             <form method="POST" action="{{ url_for('deletecar', car_id=car._id) }}">
                 <p class="control">
-                    <a type="submit" placeholder="Delete story" class="button is-danger is-rounded " name="action"
+                    <button type="submit" placeholder="Delete story" class="button is-danger is-rounded " name="action"
                         aria-label="Delete story"><i class="far fa-trash-alt"></i> Delete Car
-                    </a>
+                    </button>
                     <a href="{{ url_for('get_cars', car_id=car._id) }}" class="button is-danger is-rounded"><i
                             class="fas fa-times-circle"></i> Return</a>
                 </p>
