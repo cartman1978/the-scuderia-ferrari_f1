@@ -1,43 +1,39 @@
-<div class="hero is-info is-large">
-    <div class="hero-head">
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="{{ url_for('get_cars') }}" class="navbar-item">
-                        <img src="" alt="logo">
-                    </a>
-                    <!-- Mobile navigation -->
-                    <span class="navbar-burger" data-target="navbarMenuHeroB">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </div>
-                <!-- Desktop navigation -->
-                <div id="navbarMenuHeroB" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a href="{{ url_for('get_cars') }}" class="navbar-item">Home</a>
-                        {% if session.user %}
-                        <a href="{{ url_for('profile', username=session['user']) }}"
-                            class="navbar-item {% if 'profile' in request.path %} active {% endif %}">My Profile </a>
-                        <a href="{{ url_for('addcar') }}" class="navbar-item">New Car</a>
-                        <span class="navbar-item">
-                            <a href="{{ url_for('logout') }}"
-                                class="button is-rounded is-info is-inverted is-small-mobile" aria-label="Log out">Log
-                                Out</a>
-                        </span>
-                        {% else %}
-                        <a href="{{ url_for('register') }}"
-                            class="navbar-item  {% if 'register' in request.path %} active {% endif %}">Register</a>
-                        <span class="navbar-item">
-                            <a href="{{ url_for('login') }}"
-                                class="button is-rounded is-info is-inverted is-small-mobile {% if 'login' in request.path %} active {% endif %}"
-                                aria-label="Log In">Log In</a>
-                        </span>
-                        {% endif %}
-                    </div>
-                </div>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="{{ url_for('get_cars') }}" class="navbar-item">
+                <img src="" alt="logo">
+            </a>
+            <!-- Mobile navigation -->
+            <span class="navbar-burger" data-target="navbarMenuHeroB">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+        <!-- Desktop navigation -->
+        <div id="navbarMenuHeroB" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="{{ url_for('get_cars') }}" class="navbar-item">Home</a>
+                {% if session.user %}
+                <a href="{{ url_for('profile', username=session['user']) }}"
+                    class="navbar-item {% if 'profile' in request.path %} active {% endif %}">My Profile </a>
+                <a href="{{ url_for('addcar') }}" class="navbar-item">New Car</a>
+                <span class="navbar-item">
+                    <a href="{{ url_for('logout') }}" class="button is-rounded is-info is-inverted is-small-mobile"
+                        aria-label="Log out">Log
+                        Out</a>
+                </span>
+                {% else %}
+                <a href="{{ url_for('register') }}"
+                    class="navbar-item  {% if 'register' in request.path %} active {% endif %}">Register</a>
+                <span class="navbar-item">
+                    <a href="{{ url_for('login') }}"
+                        class="button is-rounded is-info is-inverted is-small-mobile {% if 'login' in request.path %} active {% endif %}"
+                        aria-label="Log In">Log In</a>
+                </span>
+                {% endif %}
             </div>
-        </nav>
+        </div>
     </div>
-</div>
+</nav>
