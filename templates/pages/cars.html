@@ -20,9 +20,13 @@
 
 
 
-    {% for car in cars %}
-    {% include 'components/cards/carinfo.html' %}
-    {% endfor %}
+    <div class="columns is-centered">
+        <div class="column is-full">
+            {% for car in cars %}
+            {% include 'components/cards/carinfo.html' %}
+            {% endfor %}
+        </div>
+    </div>
 
 
 
