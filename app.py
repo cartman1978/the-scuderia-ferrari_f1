@@ -28,9 +28,10 @@ def get_cars():
     Function to render the home page and shows the 
     the existing cars. Newest cars are shown first
     """
-    
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
     cars = cars_coll.find().sort('_id', -1)
-    return render_template("pages/cars.html", cars=cars) 
+    return render_template("pages/cars.html", cars=cars, username=username) 
 
 
 
