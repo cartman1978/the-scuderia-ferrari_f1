@@ -6,86 +6,86 @@
 
         {% for car in cars %}
 
+        <div class="card mb-3" style="max-width: 840px;">
+
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ car.car_image }}" class="imgCard" alt="ferrari image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
+                            <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
+                            <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
+
+                        </ul>
+
+                        <ul class="list-group list-group-flush">
 
 
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="{{ car.car_image }}" class="imgCard" alt="ferrari image">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Engine</strong>: {{ car.spec_engine }}</li>
+                            <li class="list-group-item"><strong>Power</strong>: {{ car.car_power }}</li>
+                            <li class="list-group-item"><strong>Trasmission</strong>: {{ car.trasmission }}</li>
 
-                        <li class="list-group-item"><strong>Year</strong>: {{ car.car_year }}</li>
-                        <li class="list-group-item"><strong>Name</strong>: {{ car.car_name }}</li>
-                        <li class="list-group-item"><strong>Designer</strong>: {{ car.car_design }}</li>
-
-                    </ul>
-
-                    <ul class="list-group list-group-flush">
-
-
-                        <li class="list-group-item"><strong>Engine</strong>: {{ car.spec_engine }}</li>
-                        <li class="list-group-item"><strong>Power</strong>: {{ car.car_power }}</li>
-                        <li class="list-group-item"><strong>Trasmission</strong>: {{ car.trasmission }}</li>
-
-                        <li class="list-group-item"><strong>Races</strong>: {{ car.races }}</li>
-                        <li class="list-group-item"><strong>Wins</strong>: {{ car.wins }}</li>
-                        <li class="list-group-item"><strong>Podiums</strong>: {{ car.podiums }}</li>
-                        <li class="list-group-item"><strong>Poles</strong>: {{ car.poles }}</li>
-                        <li class="list-group-item"><strong>Fast Laps</strong>: {{ car.fast_laps }}</li>
-                        <li class="list-group-item"><strong>Constructor Championship</strong>: {{
-                            car.constructor_champ
-                            }}</li>
-                        <li class="list-group-item"><strong>Driver Championship</strong>: {{ car.drivers_champ }}
-                        </li>
+                            <li class="list-group-item"><strong>Races</strong>: {{ car.races }}</li>
+                            <li class="list-group-item"><strong>Wins</strong>: {{ car.wins }}</li>
+                            <li class="list-group-item"><strong>Podiums</strong>: {{ car.podiums }}</li>
+                            <li class="list-group-item"><strong>Poles</strong>: {{ car.poles }}</li>
+                            <li class="list-group-item"><strong>Fast Laps</strong>: {{ car.fast_laps }}</li>
+                            <li class="list-group-item"><strong>Constructor Championship</strong>: {{
+                                car.constructor_champ
+                                }}</li>
+                            <li class="list-group-item"><strong>Driver Championship</strong>: {{ car.drivers_champ }}
+                            </li>
 
 
-                        <p><em>Created by: {{ car.created_by }}</em></p>
+                            <p><em>Created by: {{ car.created_by }}</em></p>
 
-                        <div class="container">
-                            <button class="button is-danger is-rounded">Description</button>
-
-
-                            <div class="hidden" style="display:none">
-                                <p>{{ car.description }} </p>
-                                <button class="button is-danger is-rounded"><i
-                                        class="fas fa-times-circle"></i>Close</button>
-                            </div>
+                            <div class="container">
+                                <button class="button is-danger is-rounded">Description</button>
 
 
-                            {% if session.user|lower == car.created_by|lower %}
-
-
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete"
-                                    id="edit-btn"><i class=" fas fa-trash-alt"></i> Delete
+                                <div class="hidden" style="display:none">
+                                    <p>{{ car.description }} </p>
+                                    <button class="button is-danger is-rounded"><i
+                                            class="fas fa-times-circle"></i>Close</button>
                                 </div>
 
-                                <a href="{{ url_for('editcar', car_id=car._id) }}" class="button is-danger is-rounded"
-                                    id="edit-btn"><i class="far fa-edit"></i> Edit</a>
 
-                                {% include 'components/modals/confirm.html' %}
-                            </div>
-                            {% endif %}
+                                {% if session.user|lower == car.created_by|lower %}
 
-                    </ul>
+
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete"
+                                        id="edit-btn"><i class=" fas fa-trash-alt"></i> Delete
+                                    </div>
+
+                                    <a href="{{ url_for('editcar', car_id=car._id) }}"
+                                        class="button is-danger is-rounded" id="edit-btn"><i class="far fa-edit"></i>
+                                        Edit</a>
+
+                                    {% include 'components/modals/confirm.html' %}
+                                </div>
+                                {% endif %}
+
+                        </ul>
+
+                    </div>
 
                 </div>
 
             </div>
-
         </div>
+
+
+        {% endfor %}
+
     </div>
-
-
-
-    {% endfor %}
-
-</div>
-{% else %}
-<h3 class="text-center">
-    No Car Found for this year
-</h3>
-{% endif %}
+    {% else %}
+    <h3 class="text-center">
+        No Car Found for this year
+    </h3>
+    {% endif %}
 </div>
