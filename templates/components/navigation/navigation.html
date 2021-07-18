@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Logo</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
         <ul class="right hide-on-med-and-down">
             <li><a class="nav-link active" aria-current="page" href="{{ url_for('get_cars') }}">Home</a></li>
             <li><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
