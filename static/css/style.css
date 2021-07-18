@@ -186,3 +186,8 @@ h3, .profileHeader {
     width: 18rem;
     height: 14rem;
 }
+
+.collapsible-header {
+    background-color: #DA281C;
+    color: #fff;
+}
