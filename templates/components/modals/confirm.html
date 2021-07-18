@@ -1,31 +1,10 @@
-{% extends 'layout/base.html' %}
-{% block content %}
-<div class="modal" id="type1">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <header class="modal-card-head">
-            <p class="modal-card-title">Delete F1 Car</p>
-        </header>
-        <section class="modal-card-body">
-            You are about to delete this car. Are you sure? This action cannot be undone!
-        </section>
-        <footer class="modal-card-foot">
-            <form method="POST" action="{{ url_for('deletecar', car_id=car._id) }}">
-                <p class="control">
-                    <button type="submit" placeholder="Delete story" class="button is-danger is-rounded " name="action"
-                        aria-label="Delete story"><i class="far fa-trash-alt"></i> Delete Car
-                    </button>
-                    <a href="{{ url_for('get_cars', car_id=car._id) }}" class="button is-danger is-rounded"><i
-                            class="fas fa-times-circle"></i> Return</a>
-                </p>
-            </form>
-            <div class="columns is-centered">
-                <div class="column cancel has-text-centered">
-                    <button class="cancel button is-danger is-rounded ml-1" aria-label="Cancel">Cancel</button>
-                </div>
-            </div>
-        </footer>
+<div id="delete-car-modal" class="modal">
+    <div class="modal-content">
+        <h4>Are you sure you would like to delete the <span class="capitalize">{{ car.car_name }}</span>?</h4>
+        <p>The information will be permanently deleted</p>
+    </div>
+    <div class="modal-footer">
+        <a href="{{ url_for('get_cars', car_id=car._id) }}" class="form-buttons">Return</a>
+        <a href="{{ url_for('deletecar', car_id=car._id) }}" class="form-buttons">Delete</a>
     </div>
 </div>
-
-{% endblock %}

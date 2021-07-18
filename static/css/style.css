@@ -171,3 +171,9 @@ h3, .profileHeader {
 .navbar-end {
     background-color: #DA281C;
 }
+
+/* Modal */
+
+#delete-log-modal {
+    text-align: center;
+}

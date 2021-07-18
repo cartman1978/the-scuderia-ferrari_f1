@@ -58,17 +58,22 @@
 
 
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <div class="button is-danger is-rounded" data-modal-type="type1" aria-label="Delete"
-                                        id="edit-btn"><i class=" fas fa-trash-alt"></i> Delete
-                                    </div>
-
-                                    <a href="{{ url_for('editcar', car_id=car._id) }}"
-                                        class="button is-danger is-rounded" id="edit-btn"><i class="far fa-edit"></i>
-                                        Edit</a>
-
+                                    <a href="{{ url_for('editcar', car_id=car._id) }}" class="btn btn-danger"
+                                        id="edit-btn"><i class="far fa-edit"></i> Edit</a>
+                                    <a href="#delete-car-modal" title="Delete dog profile" class="modal-trigger"><i
+                                            class="material-icons icons">delete</i></a>
                                     {% include 'components/modals/confirm.html' %}
+
                                 </div>
+
+
+
+
+
                                 {% endif %}
+
+
+                            </div>
 
                         </ul>
 
