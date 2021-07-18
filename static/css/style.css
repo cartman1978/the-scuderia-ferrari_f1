@@ -177,3 +177,12 @@ h3, .profileHeader {
 #delete-log-modal {
     text-align: center;
 }
+
+/* Materialize card */
+
+.card.horizontal .card-image img {
+    border-radius: 2px 0 0 2px;
+    padding: 2rem;
+    width: 18rem;
+    height: 14rem;
+}
