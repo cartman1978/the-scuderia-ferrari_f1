@@ -4,19 +4,26 @@
 {% include 'components/message/flashmessages.html' %}
 
 <div class="container">
-    <div class="input-group justify-content-center mt-4">
-        <form action="{{ url_for('search') }}" method="POST">
-            <div class="form-outline">
 
-                <input type="text" name="query" id="query" minlength="2" class="form-control"
-                    placeholder="Search by Year" required />
 
+
+
+    <form action="{{ url_for('search') }}" method="post" id="search-form">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix "></i>
+                <input type="text" name="query" id="query" minlength="4" class="validate" required>
+                <label for="query">Search Cars</label>
             </div>
-        </form>
-        <a type="submit" class="btn btn-primary" id="btn-search">
-            <i class="fas fa-search"></i>
-        </a>
-    </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_cars') }}" class="waves-effect btn-small">Reset</a>
+                <button type="submit" class="waves-effect btn-small">
+                    Search
+                </button>
+            </div>
+        </div>
+    </form>
+
 
 
 

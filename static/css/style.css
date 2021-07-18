@@ -178,6 +178,10 @@ h3, .profileHeader {
     text-align: center;
 }
 
+#search-form {
+    margin-top: 3rem;
+}
+
 /* Materialize card */
 
 .card.horizontal .card-image img {
