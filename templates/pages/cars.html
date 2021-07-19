@@ -13,11 +13,11 @@
             <div class="input-field col s12 m8">
                 <i class="fas fa-search prefix "></i>
                 <input type="text" name="query" id="query" minlength="4" class="validate" required>
-                <label for="query">Search Cars</label>
+                <label for="query" id="search-label">Search Cars</label>
             </div>
             <div class="col s12 m4">
-                <a href="{{ url_for('get_cars') }}" class="waves-effect btn-small">Reset</a>
-                <button type="submit" class="waves-effect btn-small">
+                <a href="{{ url_for('get_cars') }}" class="waves-effect btn-small" id="btn-reset">Reset</a>
+                <button type="submit" class="waves-effect btn-small" id="btn-search">
                     Search
                 </button>
             </div>
