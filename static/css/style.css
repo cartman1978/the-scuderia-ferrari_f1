@@ -9,6 +9,7 @@ html {
 body {
     font-family: 'Maven Pro', sans-serif;
     font-size: 2rem;
+    background-color: #131313;
 }
 
 @media screen and (max-width: 768px) {
@@ -83,6 +84,15 @@ h3, .profileHeader {
 .carCard {
     -webkit-box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.99);
     box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.99);
+}
+
+.header {
+    color: #DA281C;
+    font-weight: 700;
+}
+
+.card {
+    background-color: rgb(214, 210, 210);
 }
 
 #myBtn {
