@@ -81,11 +81,6 @@ h3, .profileHeader {
     width: 15rem;
 }
 
-.carCard {
-    -webkit-box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.99);
-    box-shadow: 0px 2px 12px 2px rgba(0, 0, 0, 0.99);
-}
-
 .header {
     color: #DA281C;
     font-weight: 700;
@@ -93,6 +88,8 @@ h3, .profileHeader {
 
 .card {
     background-color: rgb(214, 210, 210);
+    -webkit-box-shadow: 0px 2px 12px 2px rgba(208, 208, 208, 0.99);
+    box-shadow: 0px 2px 12px 2px rgba(208, 208, 208, 0.99);
 }
 
 #myBtn {
