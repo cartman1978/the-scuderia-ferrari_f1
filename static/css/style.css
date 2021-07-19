@@ -179,7 +179,8 @@ h3, .profileHeader {
 }
 
 #search-form {
-    margin-top: 3rem;
+    margin-top: 4rem;
+    max-width: 40rem;
 }
 
 /* Materialize card */
