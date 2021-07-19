@@ -95,6 +95,7 @@ h3, .profileHeader {
     background-color: #DA281C;
     border: none;
     color: #fff;
+    border-radius: 2rem;
 }
 
 /* The Modal (background) */
@@ -187,7 +188,7 @@ h3, .profileHeader {
     color: #DA281C;
 }
 
-#btn-search {
+#btn-search, #delete-btn {
     background-color: #F0E844;
     color: #000;
     border-radius: 2rem;
