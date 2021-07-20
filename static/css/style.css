@@ -10,6 +10,8 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-size: 2rem;
     background-color: #131313;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,8 +90,8 @@ h3, .profileHeader {
 
 .card {
     background-color: rgb(214, 210, 210);
-    -webkit-box-shadow: 0px 2px 12px 2px rgba(208, 208, 208, 0.99);
-    box-shadow: 0px 2px 12px 2px rgba(208, 208, 208, 0.99);
+    -webkit-box-shadow: -10px 0px 13px -7px #bfbfbf, 10px 0px 13px -7px #bfbfbf, -1px -4px 20px -2px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #bfbfbf, 10px 0px 13px -7px #bfbfbf, -1px -4px 20px -2px rgba(0, 0, 0, 0);
 }
 
 #myBtn {
@@ -218,4 +220,10 @@ h3, .profileHeader {
 .collapsible-header {
     background-color: #DA281C;
     color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 2.5rem;
+    }
 }
