@@ -245,3 +245,9 @@ h3, .profileHeader {
         font-size: 1.5rem;
     }
 }
+
+@media screen and (max-width: 414px) {
+    .card.horizontal .card-image {
+        max-width: 40%;
+    }
+}
