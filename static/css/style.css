@@ -90,6 +90,7 @@ h3, .profileHeader {
 
 .header {
     color: #DA281C;
+    text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 #DA281C, -2px 2px 0 #DA281C, 2px 2px 0 #DA281C, -3px 0 0 #DA281C, 3px 0 0 #DA281C, 0 -3px 0 #DA281C, 0 3px 0 #DA281C;
     font-weight: 700;
 }
 
