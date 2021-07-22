@@ -247,7 +247,10 @@ h3, .profileHeader {
 }
 
 @media screen and (max-width: 414px) {
-    .card.horizontal .card-image {
-        max-width: 40%;
+    .card.horizontal .card-image img {
+        border-radius: 2px 0 0 2px;
+        padding: 2rem;
+        width: 10rem;
+        height: 10rem;
     }
 }
