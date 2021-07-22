@@ -1,105 +1,137 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 {% include 'components/navigation/navigation.html' %}
+{% include 'components/message/flashmessages.html' %}
 
 <h3 class="text-center mt-5">Edit F1 Car</h3>
 
 <div class="container">
-    <div class="row">
-        <form method="POST" action="{{ url_for('editcar', car_id=car._id) }}">
-            <div class="mb-3">
-                <label for="car_year" class="form-label">Year</label>
-                <input type="number" class="form-control" name="car_year" id="car_year" value="{{ car.car_year }}"
-                    min="1950" max="2021" required>
-
-                <label for="car_image" class="form-label">Car Image</label>
-                <input type="text" class="form-control" name="car_image" id="car_image" value="{{ car.car_image }}"
-                    required>
-
-                <label for="car_name" class="form-label">Model Name</label>
-                <input type="text" class="form-control" name="car_name" id="car_name" value="{{ car.car_name }}"
-                    minlength="5" maxlength="50" required>
-
-                <label for="car_design" class="form-label">Designer's</label>
-                <input type="text" class="form-control" name="car_design" id="car_design" value="{{ car.car_design}}"
-                    minlength="5" maxlength="50" required>
-
-                <label for="car_driver1" class="form-label">Driver 1</label>
-                <input type="text" class="form-control" name="car_driver1" id="car_driver1"
-                    value="{{ car.car_driver1 }}" minlength="5" maxlength="50" required>
-
-                <label for="car_driver2" class="form-label">Driver 2</label>
-                <input type="text" class="form-control" name="car_driver2" id="car_driver2"
-                    value="{{ car.car_driver2 }}" minlength="5" maxlength="50" required>
-
-                <label for="spec_engine" class="form-label">Engine</label>
-                <input type="text" class="form-control" name="spec_engine" id="spec_engine"
-                    value="{{ car.spec_engine }}" minlength="5" maxlength="50" required>
-
-                <label for="car_power" class="form-label">Power</label>
-                <input type="text" class="form-control" name="car_power" id="car_power" value="{{ car.car_power}}"
-                    minlength="5" maxlength="50" required>
-
-                <label for="trasmission" class="form-label">Trasmission</label>
-                <input type="text" class="form-control" name="trasmission" id="trasmission"
-                    value="{{ car.trasmission }}" minlength="5" maxlength="50" required>
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="{{ url_for('editcar', car_id=car._id) }}">
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="car_year" class="form-label">Year</label>
+                    <input type="number" class="form-control" name="car_year" id="car_year" value="{{ car.car_year }}"
+                        min="1950" max="2021" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="car_image" class="form-label">Car Image</label>
+                    <input type="text" class="form-control" name="car_image" id="car_image" value="{{ car.car_image }}"
+                        required>
+                </div>
             </div>
 
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="car_name" class="form-label">Model Name</label>
+                    <input type="text" class="form-control" name="car_name" id="car_name" value="{{ car.car_name }}"
+                        minlength="5" maxlength="50" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="car_design" class="form-label">Designer's</label>
+                    <input type="text" class="form-control" name="car_design" id="car_design"
+                        value="{{ car.car_design}}" minlength="5" maxlength="50" required>
+                </div>
+            </div>
 
             <div class="row">
-                <div class="col-md-1">
+                <div class="input-field col s6">
+                    <label for="car_driver1" class="form-label">Driver 1</label>
+                    <input type="text" class="form-control" name="car_driver1" id="car_driver1"
+                        value="{{ car.car_driver1 }}" minlength="5" maxlength="50" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="car_driver2" class="form-label">Driver 2</label>
+                    <input type="text" class="form-control" name="car_driver2" id="car_driver2"
+                        value="{{ car.car_driver2 }}" minlength="5" maxlength="50" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="spec_engine" class="form-label">Engine</label>
+                    <input type="text" class="form-control" name="spec_engine" id="spec_engine"
+                        value="{{ car.spec_engine }}" minlength="5" maxlength="50" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="car_power" class="form-label">Power</label>
+                    <input type="text" class="form-control" name="car_power" id="car_power" value="{{ car.car_power}}"
+                        minlength="5" maxlength="50" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="trasmission" class="form-label">Trasmission</label>
+                    <input type="text" class="form-control" name="trasmission" id="trasmission"
+                        value="{{ car.trasmission }}" minlength="5" maxlength="50" required>
+
+                </div>
+                <div class="input-field col s2">
                     <label for="races" class="form-label">Races</label>
                     <input type="number" min="1" max="100" class="form-control" name="races" id="races"
                         value="{{ car.races }}" required>
                 </div>
-                <div class="col-md-1">
+                <div class="input-field col s2">
                     <label for="wins class=" class="form-label">Wins</label>
                     <input type="number" min="0" max="100" class="form-control" name="wins" id="wins"
                         value="{{ car.wins }}" required>
                 </div>
-                <div class="col-md-1">
+                <div class="input-field col s2">
                     <label for="podiums" class="form-label">Podiums</label>
                     <input type="number" min="0" max="100" class="form-control" name="podiums" id="podiums"
                         value="{{ car.podiums }}" required>
                 </div>
-                <div class="col-md-1">
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12 m3">
                     <label for="poles" class="form-label">Poles</label>
                     <input type="number" min="0" max="100" class="form-control" name="poles" id="poles"
                         value="{{ car.poles }}" required>
                 </div>
-                <div class=" col-md-1">
+                <div class="input-field col s12 m3">
                     <label for="fast_laps" class="form-label">Fast Laps</label>
                     <input type="number" min="0" max="100" class="form-control" name="fast_laps" id="fast_laps"
                         value="{{ car.fast_laps }}" required>
                 </div>
-                <div class=" col-md-2">
+                <div class="input-field col s12 m3">
                     <label for="constructor_champ" class="form-label">Constructor Championships</label>
                     <input type="number" min="0" max="20" class="form-control" name="constructor_champ"
                         id="constructor_champ" value="{{ car.constructor_champ }}" required>
                 </div>
-                <div class=" col-md-2">
+                <div class="input-field col s12 m3">
                     <label for="drivers_champ" class="form-label">Drivers Championship</label>
                     <input type="number" min="0" max="20" class="form-control" name="drivers_champ" id="drivers_champ"
                         value="{{ car.drivers_champ }}" required>
                 </div>
-                <div class="col-12">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description" aria-label="With textarea"
-                        minlength="700" maxlength="2500" required>
-                    {{- car.description -}}
-                </textarea>
+            </div>
+
+            <!-- car description-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="description" id="description" minlength="100" maxlength="700"
+                        class="materialize-textarea validate" required>
+                        {{- car.description -}}
+                    </textarea>
+                    <label for="description"> Description</label>
+
                 </div>
             </div>
 
+            <!-- Submit -->
             <div class="row">
-                <div class="text-center">
-                    <a href="{{ url_for('get_cars') }}" class="btn btn-danger m-2">Cancel <i
-                            class="fas fa-times-circle right"></i></a>
-                    <button type="submit" class="btn-reg">Edit Car <i class="fas fa-edit right"></i></button>
+                <div class="col s12 center-align">
+                    <a href="{{ url_for('get_cars') }}" class="waves-effect btn-small modal-trigger"
+                        id="delete-btn">Cancel <i class="fas fa-times-circle right"></i></a>
+                    <button type="submit" class="waves-effect btn-small" id="edit-btn">Edit Car <i
+                            class="fas fa-edit right"></i></button>
                 </div>
             </div>
 
         </form>
     </div>
 </div>
+
 {% endblock %}
