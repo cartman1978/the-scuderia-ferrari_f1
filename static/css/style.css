@@ -76,6 +76,12 @@ h3, .profileHeader {
     color: #DA281C;
 }
 
+#page-title {
+    text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 #DA281C, -2px 2px 0 #DA281C, 2px 2px 0 #DA281C, -3px 0 0 #DA281C, 3px 0 0 #DA281C, 0 -3px 0 #DA281C, 0 3px 0 #DA281C;
+    font-size: 4rem;
+    margin: 4rem;
+}
+
 .imgCard {
     margin-top: 2rem;
     object-fit: cover;
@@ -183,6 +189,7 @@ h3, .profileHeader {
 
 #search-form {
     margin-top: 4rem;
+    margin: auto;
     max-width: 40rem;
 }
 
@@ -207,7 +214,7 @@ h3, .profileHeader {
     border-radius: 2rem;
 }
 
-/* Materialize card */
+/* card */
 
 .card.horizontal .card-image img {
     border-radius: 2px 0 0 2px;
@@ -221,14 +228,19 @@ h3, .profileHeader {
     color: #fff;
 }
 
+/* form */
+
+.input-field.col label {
+    color: #DA281C;
+    font-weight: 700;
+}
+
+#row-form {
+    margin-top: 4rem;
+}
+
 @media screen and (min-width: 1023px) {
     .input-field.col label {
         font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 414px) {
-    input-field {
-        padding-bottom: 2rem;
     }
 }
