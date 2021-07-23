@@ -278,6 +278,10 @@ h3, .profileHeader {
     .input-field.col label {
         font-size: 1.5rem;
     }
+    .modal {
+        width: 60%;
+        height: 50%;
+    }
 }
 
 @media screen and (max-width: 414px) {
