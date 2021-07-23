@@ -19,18 +19,18 @@ body {
     }
 }
 
-nav {
+nav, .sidenav {
     background-color: #DA281C !important;
     box-shadow: 0px 8px 12px -2px rgba(172, 172, 172, 0.5);
 }
 
-nav ul a {
+.sidenav li>a {
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     font-size: 2rem;
 }
 
-nav ul a:hover {
+.sidenav li>a:hover {
     color: rgb(221, 216, 216);
 }
 
