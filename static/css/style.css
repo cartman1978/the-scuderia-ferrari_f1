@@ -294,4 +294,7 @@ h3, .profileHeader {
     .card .card-content {
         padding: 0.5rem;
     }
+    .header {
+        font-size: 2.5rem;
+    }
 }
