@@ -253,4 +253,7 @@ h3, .profileHeader {
         width: 10rem;
         height: 10rem;
     }
+    .card .card-content {
+        padding: 0.5rem;
+    }
 }
