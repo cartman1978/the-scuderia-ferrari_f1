@@ -155,6 +155,10 @@ h3, .profileHeader {
     background-color: #F0E844;
 }
 
+.modal .modal-footer {
+    background-color: #F0E844;
+}
+
 #query {
     background: rgb(214, 210, 210);
     border-radius: 2rem;
