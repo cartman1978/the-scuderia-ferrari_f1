@@ -3,42 +3,49 @@
 {% include 'components/navigation/navigation.html' %}
 {% include 'components/message/flashmessages.html' %}
 
-<h4 class="text-center reg-header">Register for an account</h4>
+<h4 class="center-align reg-header">Register for an account</h4>
 
 
-<form class="row g-3 " method="POST" action="{{ url_for('register') }}">
-    <div class="row justify-content-center">
-        <div class="col-md-12 w-50">
-            <i class="fas fa-user-plus"></i>
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username" minlength="5" maxlength="15"
-                pattern="^[a-zA-Z0-9]{5,15}$" required>
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input id="username" name="username" type="text" class="validate" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fas fa-lock prefix"></i>
+                    <input id="password" name="password" type="password" class="validate" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- login -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="waves-effect btn-small" id="edit-btn">
+                        Log In <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+            </div>
         </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <p class="center-align reg-par">
+            Already have an Account? <a href="{{ url_for('login') }}" class="regText"> Register Account</a>
+        </p>
     </div>
 
-    <div class="row justify-content-center">
-        <div class="col-md-12 w-50">
-            <i class="fas fa-lock"></i>
-            <label for="password class=" form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" minlength="5" maxlength="15"
-                pattern="^[a-zA-Z0-9]{5,15}$" required>
-        </div>
-
-    </div>
-    <div class="text-center">
-        <button type="submit" class="btn-reg">Sign in</button>
-    </div>
-
-    <div class="row justify-content-center mt-3">
-        <div class="col-md-12 w-50">
-            <p class="text-center">
-                Already have an Account? <a class="regLink" href="{{ url_for('login') }}">Log In</a>
-            </p>
-        </div>
-    </div>
-
-
-
-</form>
+</div>
 
 {% endblock %}
