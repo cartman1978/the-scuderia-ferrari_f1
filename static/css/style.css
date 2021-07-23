@@ -76,6 +76,7 @@ input:focus, button:focus {
 
 h3, .profileHeader {
     color: #DA281C;
+    padding: 1rem;
 }
 
 #page-title {
