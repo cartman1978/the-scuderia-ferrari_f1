@@ -22,3 +22,16 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
 });
 
+
+
+jQuery(function ($) {
+    $('.textillate-5').textillate({
+        loop: true,
+        minDisplayTime: 3000,
+        initialDelay: 500,
+
+        in: {
+            effect: 'fadeIn', //EffectType(options;http://textillate.js.org/)
+        }
+    });
+});
