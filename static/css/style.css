@@ -274,6 +274,13 @@ img:hover {
     color: #fff;
 }
 
+strong {
+    background: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2px;
+}
+
 /* form */
 
 .input-field.col label {
