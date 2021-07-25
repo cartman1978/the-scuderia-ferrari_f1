@@ -256,6 +256,17 @@ h3, .profileHeader {
     padding: 2rem;
     width: 18rem;
     height: 14rem;
+    background-size: 100%;
+}
+
+img:hover {
+    -ms-transform: scale(1.9);
+    /* IE 9 */
+    -webkit-transform: scale(1.9);
+    /* Safari 3-8 */
+    transform: scale(1.9);
+    transition: transform .5s;
+    z-index: 1;
 }
 
 .collapsible-header {
