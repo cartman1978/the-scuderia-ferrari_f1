@@ -36,3 +36,10 @@ jQuery(function ($) {
     });
 });
 
+
+$(document).ready(function () {
+    $('.container').mouseenter(function () {
+        $('p').css("color", "#DA281C");
+        $('p').css("font-weight", "bold");
+    });
+});
