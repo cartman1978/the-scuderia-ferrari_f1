@@ -275,10 +275,16 @@ img:hover {
 }
 
 strong {
-    background: #000;
-    color: #fff;
-    border-radius: 1rem;
-    padding: 2px;
+    background: #fff;
+    color: #000;
+    border-radius: 1.3rem;
+    padding: 4px;
+    -webkit-box-shadow: 4px 7px 5px -2px rgba(0, 0, 0, 0.94);
+    box-shadow: 4px 7px 5px -2px rgba(0, 0, 0, 0.94);
+}
+
+p {
+    padding: 6px;
 }
 
 /* form */
