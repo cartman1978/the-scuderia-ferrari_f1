@@ -279,8 +279,8 @@ strong {
     color: #fff;
     border-radius: 1.3rem;
     padding: 4px;
-    -webkit-box-shadow: 4px 7px 5px -2px rgba(0, 0, 0, 0.94);
-    box-shadow: 4px 7px 5px -2px rgba(0, 0, 0, 0.94);
+    -webkit-box-shadow: 7px 7px 5px -4px rgba(0, 0, 0, 0.94);
+    box-shadow: 7px 7px 5px -4px rgba(0, 0, 0, 0.94);
 }
 
 p {
