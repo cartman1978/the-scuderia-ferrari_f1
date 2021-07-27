@@ -69,6 +69,7 @@ The Scuderia Ferrari F1 will make fans filter car by year, find information rela
 * As a user, I want to be able to search Ferrari F1 car by year to get specific car information.
 * As a user, I want to be able to add many cars information I want.
 * As a user, I want to have the possibility to edit info added or want to add/delete some info.
+* As a user, I want to have the possibiltiy to delete a car as well when no longer relevant.
 * As a user, I want the website to be easy to use.
 * As a user, I want the process to add / edit / delete info to be easy.
 
@@ -390,3 +391,29 @@ The edit functionality works as planned across various browsers and devices. The
 - Verdict
 
 The test has passed all the criteria and works like planned.
+
+### **Delete Car**
+
+As a user, I want to have the possibiltiy to delete a car as well when no longer relevant.
+
+- Plan
+
+In case the car information is no longer relevant, the user should be able to delete it. There will be a delete button  which the user can use. The relevant car will be removed from the database.
+
+- Implementation
+
+I have added the delete button to every car section, next to the edit button. When the user clicks on the button, the car will be removed from the database and is being redirected to the home page. 
+
+- Test
+
+When the delete button for the car is clicked, the relevant car is being removed. After the first test I realized how easy it was to accidentaly click the cancel button and delete the car. To make sure that the user doesn't click the delete button by accident, I have included a modal to confirm that the user would like to proceed with deleting the dog car.
+
+- Result 
+
+The delete funtionality works as planned across various browsers and devices. The modal opens up when the button is clicked asking the user if they are sure they would like to delete the car. When no is selected, the user is taken back the main page. When yes, the car deleted from the database. The delete button for the car is correctly being displayed and works as planned.
+
+- Verdict
+
+The test has passed all the criteria and works like planned.
+
+
