@@ -66,7 +66,7 @@ The Scuderia Ferrari F1 will make fans filter car by year, find information rela
 * As a user, I would like to have my persoanl profile with favourite car.
 * As a user, I want to be able to add car specs, race results, drivers and images for a specific car.
 * As a user, I would like to have a dashboard where I can  have a good overview.
-* As a user, i want to be able to search Ferrari F1 car by year to get specific car information.
+* As a user, I want to be able to search Ferrari F1 car by year to get specific car information.
 * As a user, I want to be able to add many cars information I want.
 * As a user, I want to have the possibility to edit info added or want to add/delete some info.
 * As a user, I want the website to be easy to use.
@@ -338,5 +338,29 @@ I have tested the add_car form various times to make sure it works properly. The
 Adding a profile for the car works as planned and looks good across various browsers and devices. This includes the inputfields and the submit button.
 
 - Verdict 
+
+The test has passed all the criteria and works like planned.
+
+### **Search Car**
+
+ As a user, I want to be able to search Ferrari F1 car by year to get specific car information.
+
+- Plan
+
+I would like to create a search form where user can simple enter the year who is looking to find a Ferrari F1, and all the results for the year entered will dipslay to the user.
+
+- Implementation
+
+When the user visit the home page, a search button will appear on top where the user can enter the year which is looking for. If the date that was inserted is already created, the car will be displayed on the screen. If there was no car found with that date, the following message will appear: "No car found for this". After this, the user can either search on another date or return to the dashboard.
+
+- Test
+
+When I tested the first time I notice that if car was in the database it will shown but if no car was found in the database, the above feedback message was not coming up, I had to change the expression if cars which I will expalin on the Bugs section.
+
+- Result
+
+The search car page works as planned across various browsers and devices. Search function works as planned and return the correct car by year or feedback message depending on the user input. 
+
+- Verdict
 
 The test has passed all the criteria and works like planned.
