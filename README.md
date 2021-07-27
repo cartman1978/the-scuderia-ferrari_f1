@@ -364,3 +364,29 @@ The search car page works as planned across various browsers and devices. Search
 - Verdict
 
 The test has passed all the criteria and works like planned.
+
+
+### **Edit Car**
+
+As a user, I want to have the possibility to edit info added or want to add/delete some info.
+
+- Plan
+
+The user has to be able to edit an existing car and profile when a mistake was made or when the user wants to add certain information. So the information that the user inserted before remains intact and will be displayed on the page in order to have a good user experience. Every car profile will have an edit button which will take the user to the edit_car screen.
+
+- Implementation
+
+For this functionality I used the same car-form /add_car-form.
+I have used a variable (editcar) to make the difference between adding and editing a car. The value of the input fields will already be filled in with the information that the user has inserted before. When the user submits the form, all the fields will be updated in the relevant collection in the database. In order to make this function work, I had to include the car_id for the edit car profile. This way I made sure that the correct car was updated.
+
+- Test
+
+I have tested the edit functionality various times to make sure the data was being updated correctly. After the submission of the form, the user is being redirected to the home page and a message to confirm that the car was updated. Cancel button also takes the user back to the home page in case the user doesn't want to proceed with the changes.
+
+- Result
+
+The edit functionality works as planned across various browsers and devices. The correct document in the car database in being updated and the user is taken back to the main page. Cancel button redirects the user correctly to the relevant home page.
+
+- Verdict
+
+The test has passed all the criteria and works like planned.
