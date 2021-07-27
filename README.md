@@ -416,4 +416,21 @@ The delete funtionality works as planned across various browsers and devices. Th
 
 The test has passed all the criteria and works like planned.
 
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+### **Bugs**
+---
+Search Car message not working
+
+- Bug
+When the user search for a car by year if the car is not in the database a message should appear to say that car was not found, but after the user hit search button and no car results coming up I notice that no message was shown to the user.
+
+- Fix
+After some research I found that the expression if cas|length > 0 was giving me an error and doesn't really works well. I found on stackoverflow that replacing the above expression with if questions.count() > 0 will may fix the issue.
+
+- Verdict
+After reload the page and try again, message is now showing correctly.
+
 
