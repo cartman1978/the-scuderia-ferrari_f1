@@ -292,6 +292,31 @@ Signing in with the correct username and password works as planned and the corre
 Sign-in form is working as planned and the input is being verified correctly with the stored information of the database. Redirection to the correct dashboard works as well as planned so the user can navigate to add new car or view its profile and check what car was added.
 
 
+### **Log In** 
+
+As a user, I would like to login after I created my account and see previous inserted information about F1 car.
+
+- Plan
+
+My plan is to create a login form where the user can fill in its username and password. After signing in, the user will be redirected to the home page where the user can see the previously inserted F1 car.
+
+- Implementation
+
+I created a form where the user can fill in its username and password which will be verified with the information stored in the database. When the wrong information is being filled in, the correct feedback will be provided to the user. 
+
+- Test
+
+Signing in with the correct username and password works as planned and the correct dashboard of that user will be displayed. When the user fills in the wrong username and/or password, the correct message is being displayed on the screen. 
+
+- Result
+
+Sign-in form is working as planned and the input is being verified correctly with the stored information of the database. Redirection to the correct profile page works as well as planned. Tested the sign-in form on various browers and devices and the form is responsive and userfriendly. Feedback provided to the user stands out nicely.
+
+- Verdict
+
+The test has passed all the criteria and works like planned.
+
+
 ### **Car**
 
 As a user, I would like to have my persoanl profile with favourite car.
