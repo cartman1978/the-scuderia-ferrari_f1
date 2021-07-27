@@ -244,7 +244,7 @@ description     | String
 
 - [Font Awesome](https://fontawesome.com/)
 - [Bootsrap](https://getbootstrap.com/)
-- [Bulma](https://bulma.io/)
+- [Materialize](https://materializecss.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [jQuery](https://jquery.com/)
 
@@ -262,3 +262,56 @@ description     | String
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 - [Heroku](https://www.heroku.com/)
 - [Github](https://github.com/)
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Testing**
+
+---
+
+### **Registration**
+
+User story: As a user, I would like to be able to register for the website so I can have my personal environment
+
+- Plan
+
+To create  a page where the user can register for its personal account to which only the user has access. initially my plan was to show the registration form when user open the website and to register begore can visualize any car, but I changed my mind as I believe that it can appeal user to register if they like the content.
+
+- Implementation
+
+I created a form where the user can fill in its username and password which will be verified with the information stored in the database. when the wrong username or password is being filled, the correct message will be provided to the user.
+
+- Test
+
+Signing in with the correct username and password works as planned and the correct dashboard of that user will be displayed. When the user fills in the wrong username and/or password, the correct message is being displayed on the screen.
+
+- Result
+
+Sign-in form is working as planned and the input is being verified correctly with the stored information of the database. Redirection to the correct dashboard works as well as planned so the user can navigate to add new car or view its profile and check what car was added.
+
+
+### **Car**
+
+As a user, I would like to have my persoanl profile with favourite car.
+
+- Plan
+
+The user should be able to created a profile for the dog in which it can fill in various information like: car name, year whne car was build, number of races, all the car specs and stats for the World Championship results.  A summary of the car profile will be displayed on the home page overview.
+
+- Implementation
+
+I have created a form with the various input fields where the user can fill in the information. I made all the  fields required because there are important car information that any ohter user need to see. For the image, I worked with an url that has to be filled in. For features to be implemented there is indeed the option to upload images from user device.
+
+- Test
+
+I have tested the add_car form various times to make sure it works properly. The input is stored correctly in cars collection in the database. When testing this on mobile devices I notice that the form was diplayed badly as the gap between each  field was to close, so I used smaller column size in Materialize.
+
+- Result
+
+Adding a profile for the car works as planned and looks good across various browsers and devices. This includes the inputfields and the submit button.
+
+- Verdict 
+
+The test has passed all the criteria and works like planned.
