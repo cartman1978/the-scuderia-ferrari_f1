@@ -487,6 +487,9 @@ To deploy this app on Heroku, the following steps were taken:
     - **SECRET_KEY** : `<YOUR_SECRET_KEY>`
 5. The app should now be deployed to Heroku - click the "Open App" button to view the deployed site.
 
+## Credits
 
+* [favicon.io](https://favicon.io/) used to generate the site's favicon image.
+* [pinterest](https://www.pinterest.ie/pin/345369865145187980/?autologin=true) for making their pictures publicly available.
 
 
