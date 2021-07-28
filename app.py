@@ -33,7 +33,6 @@ def get_cars():
     return render_template("pages/cars.html", cars=cars) 
 
 
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -63,10 +62,14 @@ def register():
             flash("Username already in use")
             return redirect(url_for("register"))
         
-        username = request.form.get("username").lower()
         password = generate_password_hash(request.form.get("password"))
         
-        
+        username = request.form.get("username").lower()
+        # Regex to match ^[a-zA-Z0-9]{5,15}$ else return error
+        if not re.match(r"^[a-zA-Z0-9]{5,15}$", password):
+            flash('Invalid Uesrname')
+            return redirect(url_for("register"))
+    
         mongo.db.users.insert_one({
             'username': username,
             'password': password})
