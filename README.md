@@ -433,4 +433,36 @@ After some research I found that the expression if cas|length > 0 was giving me 
 - Verdict
 After reload the page and try again, message is now showing correctly.
 
+---
+
+## Deployment
+### Local Deployment
+
+The following dependencies will need to be installed in order to run this application locally:
+- [Python3](https://www.python.org/downloads) to run the application.
+- [PIP](https://pip.pypa.io/en/stable/installing) to install app requirements.
+- [VSCode](https://code.visualstudio.com/).
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for cloning and version control.
+- [MongoDB](https://www.mongodb.com/) to create a database using MongoDB Atlas.
+
+Follow the below steps for local deployment:
+
+1. Clone the GitHub repository by entering the following command into the Git terminal:
+    - `git clone https://github.com/cartman1978/the-scuderia-ferrari_f1.git`
+2. After cloning the project, create an `env.py` file that includes the below code, replacing the `SECRET_KEY`, `MONGO_URI`, `MONGO_DBNAME` with your own credentials:
+```
+import os
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+os.environ.setdefault("MONGO_URI", "YOUR_MONGO_URI")
+os.environ.setdefault("MONGO_DBNAME", "scuderia")
+```
+3. Create a `.gitignore` file, and add the `env.py` file to the list of files.
+4. Install all requirements from the [requirements.txt](https://github.com/cartman1978/the-scuderia-ferrari_f1/blob/master/requirements.txt) file using this command:
+    - `pip3 -r requirements.txt`
+5. Sign up for a [MongoDB](https://www.mongodb.com) account, and create a new Database called `scuderia`. The collections in that database should be structured as per [Database Structure](#database-structure).
+
+
+
 
