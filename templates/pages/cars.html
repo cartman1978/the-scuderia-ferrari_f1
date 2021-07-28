@@ -5,8 +5,6 @@
 
 <div class="container">
 
-
-
     <div class="row valign-wrapper center-align" id="row-form">
         <form action="{{ url_for('search') }}" method="post" id="search-form">
             <div class="input-field col s12 m6">
@@ -23,9 +21,6 @@
         </form>
     </div>
 
-
-
-
     <div class="columns is-centered">
         {% if cars.count() > 0 %}
         <div class="column is-full">
@@ -39,8 +34,6 @@
         </h3>
         {% endif %}
     </div>
-
-
 
 </div>
 

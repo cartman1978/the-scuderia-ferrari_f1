@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
+:root {
+    --red: #DA281C;
+    --yellow: #F0E844;
+    --white: #fff;
+    --black: #000;
+}
+
 html {
     font-size: 62.5%;
     position: relative;
@@ -8,24 +15,18 @@ html {
 
 body {
     font-family: 'Maven Pro', sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     background-color: #131313;
     scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
-}
-
 nav, .sidenav {
-    background-color: #DA281C !important;
+    background-color: var(--red) !important;
     box-shadow: 0px 8px 12px -2px rgba(172, 172, 172, 0.5);
 }
 
 nav ul a {
-    color: #fff;
+    color: var(--white);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     font-size: 2rem;
 }
@@ -35,7 +36,7 @@ nav ul a:hover {
 }
 
 .sidenav li>a {
-    color: #fff;
+    color: var(--white);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     font-size: 2rem;
 }
@@ -45,29 +46,29 @@ nav ul a:hover {
 }
 
 .fa-bars {
-    color: #fff;
+    color: var(--white);
 }
 
 .reg-header {
     margin: 3rem;
     font-size: 3.8rem;
-    color: #DA281C;
-    text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 #DA281C, -2px 2px 0 #DA281C, 2px 2px 0 #DA281C, -3px 0 0 #DA281C, 3px 0 0 #DA281C, 0 -3px 0 #DA281C, 0 3px 0 #DA281C;
+    color: var(--red);
+    text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 var(--red), -2px 2px 0 var(--red), 2px 2px 0 var(--red), -3px 0 0 #DA281C, 3px 0 0 #DA281C, 0 -3px 0 #DA281C, 0 3px 0 #DA281C;
 }
 
 .btn-reg {
-    background-color: #DA281C;
+    background-color: var(--red);
     border: none;
-    color: #fff;
+    color: var(--white);
     padding: 0.5rem;
     border-radius: 0.5rem;
     width: 8rem;
 }
 
 .btn-reg:hover {
-    background-color: #fff;
-    color: #DA281C;
-    border: 1px solid #DA281C;
+    background-color: var(--white);
+    color: var(--red);
+    border: 1px solid var(--red);
 }
 
 input:focus, button:focus {
@@ -77,20 +78,20 @@ input:focus, button:focus {
 }
 
 .fa-user-plus, .fa-user-circle, .fa-lock {
-    color: #DA281C;
+    color: var(--red);
 }
 
 .regLink {
-    color: #DA281C;
+    color: var(--red);
 }
 
 h3, .profileHeader {
-    color: #DA281C;
+    color: var(--red);
     padding: 1rem;
 }
 
 #page-title {
-    text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 #DA281C, -2px 2px 0 #DA281C, 2px 2px 0 #DA281C, -3px 0 0 #DA281C, 3px 0 0 #DA281C, 0 -3px 0 #DA281C, 0 3px 0 #DA281C;
+    text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 var(--red), -2px 2px 0 var(--red), 2px 2px 0 var(--red), -3px 0 0 var(--red), 3px 0 0 var(--red), 0 -3px 0 var(--red), 0 3px 0 var(--red);
     font-size: 4rem;
     margin: 4rem;
 }
@@ -102,7 +103,7 @@ h3, .profileHeader {
 }
 
 .header {
-    color: #DA281C;
+    color: var(--red);
     text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 rgb(250, 250, 250), -2px 2px 0 rgb(250, 250, 250), 2px 2px 0 rgb(250, 250, 250), -3px 0 0 rgb(250, 250, 250), 3px 0 0 rgb(250, 250, 250), 0 -3px 0 rgb(250, 250, 250), 0 3px 0 rgb(250, 250, 250);
     font-weight: 700;
 }
@@ -114,15 +115,15 @@ h3, .profileHeader {
 }
 
 #myBtn {
-    background-color: #F0E844;
-    color: #DA281C;
+    background-color: var(--yellow);
+    color: var(--red);
     border: none;
 }
 
 #edit-btn {
-    background-color: #DA281C;
+    background-color: var(--red);
     border: none;
-    color: #fff;
+    color: var(--white);
     border-radius: 2rem;
 }
 
@@ -144,19 +145,19 @@ h3, .profileHeader {
 /* Modal Content */
 
 .modal {
-    background-color: #F0E844;
+    background-color: var(--yellow);
     margin: auto;
     padding: 30px;
-    border: 1px solid #000;
+    border: 1px solid var(--black);
     width: 80%;
 }
 
 .modal-card-head, .modal-card-body, .modal-card-foot {
-    background-color: #F0E844;
+    background-color: var(--yellow);
 }
 
 .modal .modal-footer {
-    background-color: #F0E844;
+    background-color: var(--yellow);
 }
 
 #query {
@@ -165,7 +166,7 @@ h3, .profileHeader {
 }
 
 .input-field .prefix.active {
-    color: #DA281C;
+    color: var(--red);
 }
 
 .input-field {
@@ -181,7 +182,7 @@ h3, .profileHeader {
 
 #errorTitle {
     font-size: 4rem;
-    color: #DA281C;
+    color: var(--red);
 }
 
 #errorPar {
@@ -191,7 +192,7 @@ h3, .profileHeader {
 #btnErr {
     width: 20rem;
     margin-top: 2rem;
-    background-color: #DA281C;
+    background-color: var(--red);
 }
 
 .hidden {
@@ -204,15 +205,15 @@ h3, .profileHeader {
 }
 
 .navbar-end {
-    background-color: #DA281C;
+    background-color: var(--red);
 }
 
 .reg-par {
-    color: #fff;
+    color: var(--white);
 }
 
 .regText {
-    color: #DA281C;
+    color: var(--red);
 }
 
 /* Modal */
@@ -229,23 +230,23 @@ h3, .profileHeader {
 
 #search-label {
     margin-left: 5rem;
-    color: #DA281C;
+    color: var(--red);
     font-weight: 700;
     margin-top: -0.5rem;
 }
 
 .fa-search {
-    color: #DA281C;
+    color: var(--red);
 }
 
 #btn-search, #delete-btn {
-    background-color: #F0E844;
-    color: #000;
+    background-color: var(--yellow);
+    color: var(--black);
     border-radius: 2rem;
 }
 
 #btn-reset {
-    background-color: #DA281C;
+    background-color: var(--red);
     border-radius: 2rem;
 }
 
@@ -270,17 +271,15 @@ img:hover {
 }
 
 .collapsible-header {
-    background-color: #DA281C;
-    color: #fff;
+    background-color: var(--red);
+    color: var(--white);
 }
 
 strong {
-    background: #DA281C;
-    color: #fff;
+    background: var(--red);
+    color: var(--white);
     border-radius: 1.3rem;
     padding: 4px;
-    -webkit-box-shadow: 7px 7px 5px -4px rgba(0, 0, 0, 0.94);
-    box-shadow: 7px 7px 5px -4px rgba(0, 0, 0, 0.94);
 }
 
 p {
@@ -290,12 +289,18 @@ p {
 /* form */
 
 .input-field.col label {
-    color: #DA281C;
+    color: var(--red);
     font-weight: 700;
 }
 
 #row-form {
     margin-top: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (min-width: 1023px) {
