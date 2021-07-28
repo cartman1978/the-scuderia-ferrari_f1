@@ -463,6 +463,30 @@ os.environ.setdefault("MONGO_DBNAME", "scuderia")
     - `pip3 -r requirements.txt`
 5. Sign up for a [MongoDB](https://www.mongodb.com) account, and create a new Database called `scuderia`. The collections in that database should be structured as per [Database Structure](#database-structure).
 
+6. Run the app using the following command in the terminal:
+    - `python3 app.py`
+
+### Remote Deployment
+
+To deploy this app on Heroku, the following steps were taken:
+
+1. Create a `requirements.txt` file so Heroku can install the required dependencies.
+    - `pip3 freeze --local > requirements.txt`
+    - This project's requirements.txt file can be seen [here](https://github.com/cartman1978/the-scuderia-ferrari_f1/blob/master/requirements.txt).
+2. Create a `Procfile` with information about the type of app that will be deployed.
+    - `echo web: python app.py > Procfile`
+    - This project's Procfile file can be seen [here](https://github.com/cartman1978/the-scuderia-ferrari_f1/blob/master/Procfile).
+    - Make sure to delete the blank line at the end of the Profile, as this can cause issues when deploying to Heroku later.
+3. Create a Heroku account, create a project app, and click the "Deploy" tab. 
+4. "Connect GitHub" as the Deployment Method, and select "Enable Automatic Deployment".
+4. In the "Settings" tab, click the "Reveal Config Vars" button to configure environmental variables as follows:
+    - **IP** : `0.0.0.0`
+    - **MONGO_DBNAME**: `scuderia`
+    - **MONGO_URI** : `<YOUR_MONGO_DB_URI>`
+    - **PORT** : `5000`
+    - **SECRET_KEY** : `<YOUR_SECRET_KEY>`
+5. The app should now be deployed to Heroku - click the "Open App" button to view the deployed site.
+
 
 
 
