@@ -33,6 +33,7 @@ def get_cars():
     return render_template("pages/cars.html", cars=cars) 
 
 
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -62,14 +63,10 @@ def register():
             flash("Username already in use")
             return redirect(url_for("register"))
         
+        username = request.form.get("username").lower()
         password = generate_password_hash(request.form.get("password"))
         
-        username = request.form.get("username").lower()
-        # Regex to match ^[a-zA-Z0-9]{5,15}$ else return error
-        if not re.match(r"^[a-zA-Z0-9]{5,15}$", password):
-            flash('Invalid Uesrname')
-            return redirect(url_for("register"))
-    
+        
         mongo.db.users.insert_one({
             'username': username,
             'password': password})
@@ -145,22 +142,22 @@ def logout():
 def addcar():
     if request.method == "POST":
         cars = {
-            "car_image": request.form.get("car-image"),
-            "car_year": request.form.get("car-year"),
-            "car_name": request.form.get("car-name"),
-            "car_design": request.form.get("car-design"),
-            "car_driver1": request.form.get("car-primery-driver"),
-            "car_driver2": request.form.get("car-secondary-driver"),
-            "spec_engine": request.form.get("spec-engine"),
-            "car_power": request.form.get("car-power"),
+            "car_image": request.form.get("car_image"),
+            "car_year": request.form.get("car_year"),
+            "car_name": request.form.get("car_name"),
+            "car_design": request.form.get("car_design"),
+            "car_driver1": request.form.get("car_driver1"),
+            "car_driver2": request.form.get("car_driver2"),
+            "spec_engine": request.form.get("spec_engine"),
+            "car_power": request.form.get("car_power"),
             "trasmission": request.form.get("trasmission"),
             "races": request.form.get("races"),
             "wins": request.form.get("wins"),
             "podiums": request.form.get("podiums"),
             "poles": request.form.get("poles"),
-            "fast_laps": request.form.get("fast-laps"),
-            "constructor_champ": request.form.get("constructor-champ"),
-            "drivers_champ": request.form.get("drivers-champ"),
+            "fast_laps": request.form.get("fast_laps"),
+            "constructor_champ": request.form.get("constructor_champ"),
+            "drivers_champ": request.form.get("drivers_champ"),
             "description": request.form.get("description"),
             "created_by": session["user"]
         }
@@ -176,22 +173,22 @@ def addcar():
 def editcar(car_id):
     if request.method == "POST":
         submit = {
-            "car_image": request.form.get("car-image"),
-            "car_year": request.form.get("car-year"),
-            "car_name": request.form.get("car-name"),
-            "car_design": request.form.get("car-design"),
-            "car_driver1": request.form.get("car-primery-driver"),
-            "car_driver2": request.form.get("car-secondary-driver"),
-            "spec_engine": request.form.get("spec-engine"),
-            "car_power": request.form.get("car-power"),
+            "car_image": request.form.get("car_image"),
+            "car_year": request.form.get("car_year"),
+            "car_name": request.form.get("car_name"),
+            "car_design": request.form.get("car_design"),
+            "car_driver1": request.form.get("car_driver1"),
+            "car_driver2": request.form.get("car_driver2"),
+            "spec_engine": request.form.get("spec_engine"),
+            "car_power": request.form.get("car_power"),
             "trasmission": request.form.get("trasmission"),
             "races": request.form.get("races"),
             "wins": request.form.get("wins"),
             "podiums": request.form.get("podiums"),
             "poles": request.form.get("poles"),
-            "fast_laps": request.form.get("fast-laps"),
-            "constructor_champ": request.form.get("constructor-champ"),
-            "drivers_champ": request.form.get("drivers-champ"),
+            "fast_laps": request.form.get("fast_laps"),
+            "constructor_champ": request.form.get("constructor_champ"),
+            "drivers_champ": request.form.get("drivers_champ"),
             "description": request.form.get("description"),
             "created_by": session["user"]
         }
