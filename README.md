@@ -234,7 +234,6 @@ description     | String
 ----
 #### **Languages**
 
-### Languages ###
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -441,7 +440,7 @@ After reload the page and try again, message is now showing correctly.
 The following dependencies will need to be installed in order to run this application locally:
 - [Python3](https://www.python.org/downloads) to run the application.
 - [PIP](https://pip.pypa.io/en/stable/installing) to install app requirements.
-- [VSCode](https://code.visualstudio.com/).
+- [VSCode](https://code.visualstudio.com/) or any preferred IDE.
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for cloning and version control.
 - [MongoDB](https://www.mongodb.com/) to create a database using MongoDB Atlas.
 
@@ -459,12 +458,10 @@ os.environ.setdefault("MONGO_URI", "YOUR_MONGO_URI")
 os.environ.setdefault("MONGO_DBNAME", "scuderia")
 ```
 3. Create a `.gitignore` file, and add the `env.py` file to the list of files.
-4. Install all requirements from the [requirements.txt](https://github.com/cartman1978/the-scuderia-ferrari_f1/blob/master/requirements.txt) file using this command:
-    - `pip3 -r requirements.txt`
-5. Sign up for a [MongoDB](https://www.mongodb.com) account, and create a new Database called `scuderia`. The collections in that database should be structured as per [Database Structure](#database-structure).
+4. Sign up for a [MongoDB](https://www.mongodb.com) account, and create a new Database called `scuderia`. The collections in that database should be structured as per [Database Structure](#database-structure).
 
-6. Run the app using the following command in the terminal:
-    - `python3 app.py`
+5. Run the app using the following command in the terminal:
+    - `python app.py`
 
 ### Remote Deployment
 
