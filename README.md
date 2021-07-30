@@ -243,14 +243,13 @@ description     | String
 ### Libraries and Frameworks ###
 
 - [Font Awesome](https://fontawesome.com/)
-- [Bootsrap](https://getbootstrap.com/)
 - [Materialize](https://materializecss.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [jQuery](https://jquery.com/)
 
 ### Tools ###
 
-- [Git](https://git-scm.com/)
+- [VScode](https://code.visualstudio.com/) 
 - [GitPod](https://www.gitpod.io/)
 - [Heroku](https://www.heroku.com/)
 - [PEP8](http://pep8online.com/)
@@ -439,7 +438,7 @@ After reload the page and try again, message is now showing correctly.
 
 The following dependencies will need to be installed in order to run this application locally:
 - [Python3](https://www.python.org/downloads) to run the application.
-- [PIP](https://pip.pypa.io/en/stable/installing) to install app requirements.
+- [PIP](https://pip.pypa.io/en/stable/installing) to install app requirements, choose your Operating system(MacOS, Linux or Windows).
 - [VSCode](https://code.visualstudio.com/) or any preferred IDE.
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for cloning and version control.
 - [MongoDB](https://www.mongodb.com/) to create a database using MongoDB Atlas.
