@@ -20,6 +20,8 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Navbar */
+
 nav, .sidenav {
     background-color: var(--red) !important;
     box-shadow: 0px 8px 12px -2px rgba(172, 172, 172, 0.5);
@@ -49,32 +51,19 @@ nav, .nav-link:hover {
     color: var(--white);
 }
 
+input:focus, button:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+/* Registration */
+
 .reg-header {
     margin: 3rem;
     font-size: 3.8rem;
     color: var(--red);
     text-shadow: -2px -2px 0 rgb(250, 250, 250), 2px -2px 0 var(--red), -2px 2px 0 var(--red), 2px 2px 0 var(--red), -3px 0 0 #DA281C, 3px 0 0 #DA281C, 0 -3px 0 #DA281C, 0 3px 0 #DA281C;
-}
-
-.btn-reg {
-    background-color: var(--red);
-    border: none;
-    color: var(--white);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    width: 8rem;
-}
-
-.btn-reg:hover {
-    background-color: var(--white);
-    color: var(--red);
-    border: 1px solid var(--red);
-}
-
-input:focus, button:focus {
-    outline: 0px !important;
-    -webkit-appearance: none;
-    box-shadow: none !important;
 }
 
 .fa-user-plus, .fa-user-circle, .fa-lock {
@@ -114,32 +103,11 @@ h3, .profileHeader {
     box-shadow: -10px 0px 13px -7px #bfbfbf, 10px 0px 13px -7px #bfbfbf, -1px -4px 20px -2px rgba(0, 0, 0, 0);
 }
 
-#myBtn {
-    background-color: var(--yellow);
-    color: var(--red);
-    border: none;
-}
-
 #edit-btn {
     background-color: var(--red);
     border: none;
     color: var(--white);
     border-radius: 2rem;
-}
-
-/* The Modal (background) */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content */
@@ -260,7 +228,7 @@ h3, .profileHeader {
     background-size: 100%;
 }
 
-img:hover {
+#image:hover {
     -ms-transform: scale(1.9);
     /* IE 9 */
     -webkit-transform: scale(1.9);
@@ -301,15 +269,8 @@ p {
     body {
         font-size: 1.4rem;
     }
-}
-
-@media screen and (max-width: 1023px) {
-    .input-field.col label {
-        font-size: 1.5rem;
-    }
-    .modal {
-        width: 60%;
-        height: 50%;
+    #query {
+        width: 90%;
     }
 }
 
@@ -325,5 +286,24 @@ p {
     }
     .header {
         font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .input-field.col label {
+        font-size: 1.5rem;
+    }
+    .modal {
+        width: 60%;
+        height: 80%;
+    }
+    #err-img {
+        max-height: 55rem;
+    }
+}
+
+@media screen and (max-width: 1633px) {
+    #err-img {
+        height: 45rem;
     }
 }

@@ -1,17 +1,27 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 <div class="container">
-    <div class="card bg-dark text-white">
-        <img src="../../../static/images/crash.jpg" class="card-img" alt="ferrari crashs">
-        <div class="card-img-overlay">
-            <h1 class="text-center" id="errorTitle">Ouch!! Something went wrong!</h1>
-            <p class="text-center" id="errorPar">This is mot the page you were looking for!</p>
-            <div class="row justify-content-center">
-                <a href="{{ url_for('get_cars') }}" class="button is-danger is-rounded" id="btnErr">Go Back</a>
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                    <img id="err-img" src="../../../static/images/crash.jpg" alt="ferrari crashs">
+
+                </div>
+                <div class="card-content">
+                    <span id="errorTitle" class="card-title">Ouch!! Something went wrong!</span>
+                    <p class="align-center" id="errorPar">This is mot the page you were looking for!</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{ url_for('get_cars') }}" class="waves-effect btn-small" id="edit-btn">Go Back</a>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
+
+
+
+
 
 {% endblock %}
