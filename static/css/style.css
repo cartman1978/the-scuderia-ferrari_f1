@@ -99,8 +99,7 @@ h3, .profileHeader {
 
 .card, .card-panel {
     background-color: rgb(255, 248, 248);
-    -webkit-box-shadow: -10px 0px 13px -7px #bfbfbf, 10px 0px 13px -7px #bfbfbf, -1px -4px 20px -2px rgba(0, 0, 0, 0);
-    box-shadow: -10px 0px 13px -7px #bfbfbf, 10px 0px 13px -7px #bfbfbf, -1px -4px 20px -2px rgba(0, 0, 0, 0);
+    box-shadow: var(--yellow) 0px 5px, #b9b345 0px 10px, #8d893d 0px 15px, #6d6a35 0px 20px, #53512e 0px 25px;
 }
 
 #edit-btn {
