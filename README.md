@@ -487,5 +487,6 @@ To deploy this app on Heroku, the following steps were taken:
 
 * [favicon.io](https://favicon.io/) used to generate the site's favicon image.
 * [pinterest](https://www.pinterest.ie/pin/345369865145187980/?autologin=true) for making their pictures publicly available.
+* [CssScan](https://getcssscan.com/css-box-shadow-examples) used to generate box-shadow to the card class.
 * A special thanks to my mentor Simen [Eventyret_mentor](https://github.com/Eventyret) for his support and help.
 
