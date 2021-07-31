@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
     $('.container').mouseenter(function () {
-        $('p').css("font-weight", "bold");
+        $('p').css("font-weight", "500");
     });
 });
 

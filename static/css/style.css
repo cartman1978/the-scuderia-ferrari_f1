@@ -51,6 +51,14 @@ nav, .nav-link:hover {
     color: var(--white);
 }
 
+#logo {
+    margin: 1rem;
+}
+
+.brand-logo {
+    margin-left: 7rem;
+}
+
 input:focus, button:focus {
     outline: 0px !important;
     -webkit-appearance: none;
@@ -102,6 +110,10 @@ h3, .profileHeader {
     box-shadow: var(--yellow) 0px 5px, #b9b345 0px 10px, #8d893d 0px 15px, #6d6a35 0px 20px, #3d3c26 0px 25px;
 }
 
+#driver-list {
+    margin-left: 0.9rem;
+}
+
 #edit-btn {
     background-color: var(--red);
     border: none;
@@ -114,7 +126,7 @@ h3, .profileHeader {
 .modal {
     background-color: var(--yellow);
     margin: auto;
-    padding: 30px;
+    padding: 15rem;
     border: 1px solid var(--black);
     width: 80%;
 }
@@ -250,7 +262,7 @@ strong {
 }
 
 p {
-    padding: 6px;
+    padding: 0.4rem;
 }
 
 /* form */
