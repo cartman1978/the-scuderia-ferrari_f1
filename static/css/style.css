@@ -124,6 +124,10 @@ h3, .profileHeader {
     box-shadow: var(--yellow) 0px 5px, #b9b345 0px 10px, #8d893d 0px 15px, #6d6a35 0px 20px, #3d3c26 0px 25px;
 }
 
+.card.horizontal {
+    margin-bottom: 5rem;
+}
+
 #driver-list {
     margin-left: 0.9rem;
 }
