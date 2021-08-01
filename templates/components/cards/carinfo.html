@@ -43,6 +43,7 @@
                     </ul>
 
 
+
                     {% if session.user|lower == car.created_by|lower %}
 
 
@@ -52,6 +53,7 @@
                         <a href="#delete-car-modal" title="Delete dog profile"
                             class="waves-effect btn-small modal-trigger" id="delete-btn"><i
                                 class="material-icons icons">delete</i></a>
+
                         {% include 'components/modals/confirm.html' %}
 
                     </div>
@@ -61,6 +63,8 @@
                 </div>
 
             </div>
+
         </div>
+
     </div>
 </div>
