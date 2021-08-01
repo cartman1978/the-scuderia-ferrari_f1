@@ -35,10 +35,12 @@ nav, .nav-link {
     color: var(--white);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     font-size: 2rem;
+    height: 7rem;
 }
 
 nav, .nav-link:hover {
     color: rgb(221, 216, 216);
+    height: 7rem;
 }
 
 .sidenav li>a {
@@ -290,6 +292,10 @@ p {
     .brand-logo {
         margin-left: 2rem;
     }
+    #logo {
+        margin-left: 24rem;
+        height: 3.5rem;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -315,7 +321,8 @@ p {
         margin-left: 2rem;
     }
     #logo {
-        margin-left: 3rem;
+        margin-left: 5rem;
+        height: 3.5rem;
     }
 }
 
