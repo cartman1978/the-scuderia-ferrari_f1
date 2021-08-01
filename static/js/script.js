@@ -9,6 +9,9 @@ $(document).ready(function () {
     $('.container').mouseenter(function () {
         $('p').css("font-weight", "500");
     });
+    setTimeout(function () {
+        $('.zoom').fadeIn(3000);
+    }, 3000);
 });
 
 jQuery(function ($) {

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 :root {
     --red: #DA281C;
     --yellow: #F0E844;
@@ -63,6 +64,7 @@ nav, .nav-link:hover {
 
 .brand-logo {
     margin-left: 7rem;
+    font-family: 'Pacifico', cursive;
 }
 
 input:focus, button:focus {
@@ -103,6 +105,12 @@ h3, .profileHeader {
     margin-top: 2rem;
     object-fit: cover;
     width: 15rem;
+}
+
+.zoom {
+    display: none;
+    margin-top: -2rem;
+    color: var(--red);
 }
 
 .header {
