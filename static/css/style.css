@@ -297,6 +297,7 @@ strong {
     color: var(--white);
     border-radius: 1.3rem;
     padding: 4px;
+    font-size: 1.1rem;
 }
 
 p {
