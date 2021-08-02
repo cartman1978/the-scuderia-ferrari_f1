@@ -1,6 +1,6 @@
 # **The Scuderia Ferrari F1**
 
-![Mock up](wireframes/projectwireframe.png)
+![Mock up](wireframes/projectwireframe.PNG)
 
 ## **Goal for this project**
 
