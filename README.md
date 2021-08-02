@@ -1,5 +1,7 @@
 # **The Scuderia Ferrari F1**
 
+<img src="wireframes/projectwireframe.png" alt="webiste">
+
 ## **Goal for this project**
 
 This website is for those who support  the myth and legend of the Scuderia Ferrari. No other Formula 1 team carried the history, the passion nor the romance that this great team does. It is a machine that consumes you. It is a family that embraces and protects you.
