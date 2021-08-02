@@ -236,6 +236,22 @@ h3, .profileHeader {
     color: var(--red);
 }
 
+.fa-plus {
+    display: inline-block;
+}
+
+.fa-minus {
+    display: none !important;
+}
+
+li.active .collapsible-header .fa-plus {
+    display: none;
+}
+
+li.active .collapsible-header .fa-minus {
+    display: inline-block !important;
+}
+
 #btn-search, #delete-btn {
     background-color: var(--yellow);
     color: var(--black);

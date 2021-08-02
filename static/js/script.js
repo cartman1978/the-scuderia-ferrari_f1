@@ -13,12 +13,13 @@ $(document).ready(function () {
         $('.zoom').fadeIn(3000);
     }, 3000);
 
+
+
     // hide cars image when open description
     $('.collapsible').click(function () {
         $('.card-image').toggle();
     });
-
-
+    $('.collapsible').collapsible();
 });
 
 jQuery(function ($) {
