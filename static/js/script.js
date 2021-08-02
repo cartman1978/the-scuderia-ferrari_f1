@@ -22,6 +22,12 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
 });
 
+function flash_icon() {
+    $('.material-icons').fadeOut(1000);
+    $('.material-icons').fadeIn(1000);
+}
+setInterval(flash_icon, 5500);
+
 jQuery(function ($) {
     $('.textillate-5').textillate({
         loop: true,

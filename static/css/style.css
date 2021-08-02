@@ -314,21 +314,7 @@ p {
     margin-top: 4rem;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
-    #query {
-        width: 90%;
-    }
-    .brand-logo {
-        margin-left: 2rem;
-    }
-    #logo {
-        margin-left: 24rem;
-        height: 3.5rem;
-    }
-}
+/* Media queries */
 
 @media screen and (max-width: 320px) {
     #logo {
@@ -356,9 +342,31 @@ p {
         margin-left: 5rem;
         height: 3.5rem;
     }
+    .fa-plus {
+        margin-left: 7rem;
+    }
+    .fa-minus {
+        margin-left: 20rem;
+    }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
+    #query {
+        width: 90%;
+    }
+    .brand-logo {
+        margin-left: 2rem;
+    }
+    #logo {
+        margin-left: 24rem;
+        height: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
     .input-field.col label {
         font-size: 1.5rem;
     }
