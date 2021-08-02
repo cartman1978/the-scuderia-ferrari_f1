@@ -321,6 +321,9 @@ p {
     #logo {
         display: none;
     }
+    .collapsible {
+        max-width: 25rem;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -347,7 +350,7 @@ p {
         margin-left: 7rem;
     }
     .fa-minus {
-        margin-left: 20rem;
+        margin-left: 18rem;
     }
 }
 
