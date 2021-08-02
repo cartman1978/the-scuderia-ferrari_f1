@@ -238,10 +238,14 @@ h3, .profileHeader {
 
 .fa-plus {
     display: inline-block;
+    margin-left: 7rem;
+    margin-top: 0.5rem;
 }
 
 .fa-minus {
     display: none !important;
+    margin-left: 7rem;
+    margin-top: 0.5rem;
 }
 
 li.active .collapsible-header .fa-plus {
