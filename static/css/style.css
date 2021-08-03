@@ -316,6 +316,11 @@ p {
     margin-top: 4rem;
 }
 
+.multiCol {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 320px) {

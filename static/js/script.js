@@ -22,11 +22,15 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
 });
 
-function flash_icon() {
-    $('.material-icons').fadeOut(1000);
-    $('.material-icons').fadeIn(1000);
-}
-setInterval(flash_icon, 5500);
+
+var $descriptions = $('.material-icons');
+var i = 0;
+setInterval(function () {
+    $descriptions.removeClass('multiCol');
+    $($descriptions[i]).addClass('multiCol');
+    i++;
+    if (i === $descriptions.length) i = 0;
+}, 500)
 
 jQuery(function ($) {
     $('.textillate-5').textillate({
