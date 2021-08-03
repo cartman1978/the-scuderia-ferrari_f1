@@ -33,7 +33,6 @@ def get_cars():
     return render_template("pages/cars.html", cars=cars) 
 
 
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -66,7 +65,6 @@ def register():
         username = request.form.get("username").lower()
         password = generate_password_hash(request.form.get("password"))
         
-        
         mongo.db.users.insert_one({
             'username': username,
             'password': password})
@@ -93,7 +91,7 @@ def login():
         if existing_user:
             # check if hashed password matches with user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+             existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -123,7 +121,6 @@ def profile(username):
         return render_template('pages/profile.html', username=username, cars=cars)
     
     return redirect(url_for("login"))
-
 
 
 @app.route("/logout")
@@ -162,7 +159,6 @@ def addcar():
             "created_by": session["user"]
         }
 
-        
         mongo.db.cars.insert_one(cars)
         flash("Car Successfully Added")
         return redirect(url_for("get_cars"))
@@ -202,22 +198,15 @@ def editcar(car_id):
     else:
         flash("You don't have permission to edit this car")
 
-            
-        
-
-
-        
     car = mongo.db.cars.find_one({"_id": ObjectId(car_id)})
     return render_template("pages/editcar.html", car=car)
     
     
-
 @app.route("/deletecar/<car_id>", methods=["GET", "POST"])
 def deletecar(car_id):
     mongo.db.cars.remove({"_id": ObjectId(car_id)})
     flash("Car Successfully Deleted")
     return redirect(url_for("get_cars", car_id=car_id))
-
 
 
 @app.errorhandler(404)
@@ -229,7 +218,6 @@ def page_not_found(error):
     return render_template("/components/errors/404.html", error=error), 404
 
 
-
 @app.errorhandler(500)
 def something_went_wrong(error):
     """
@@ -237,7 +225,6 @@ def something_went_wrong(error):
     that takes the user back home
     """
     return render_template("/components/errors/500.html", error=error), 500
-
 
 
 if __name__ == "__main__":
