@@ -32,6 +32,11 @@ def get_cars():
     cars = cars_coll.find().sort('_id', -1)
     return render_template("pages/cars.html", cars=cars) 
 
+    """
+    Function to search cars by year
+    and sort by last car updated
+    """
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():

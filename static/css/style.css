@@ -65,7 +65,7 @@ nav, .nav-link:hover {
 }
 
 .brand-logo {
-    margin-left: 9rem;
+    margin-left: 8rem;
     font-family: 'Pacifico', cursive;
 }
 
@@ -146,7 +146,6 @@ h3, .profileHeader {
 .modal {
     background-color: var(--yellow);
     margin: auto;
-    padding: 15rem;
     border: 1px solid var(--black);
     width: 80%;
 }
@@ -382,7 +381,7 @@ p {
         width: 90%;
     }
     .brand-logo {
-        margin-left: 2rem;
+        margin-left: -2rem;
     }
     #logo {
         margin-left: 24rem;
@@ -393,10 +392,6 @@ p {
 @media screen and (max-width: 1024px) {
     .input-field.col label {
         font-size: 1.5rem;
-    }
-    .modal {
-        width: 60%;
-        height: 80%;
     }
     #err-img {
         max-height: 55rem;
