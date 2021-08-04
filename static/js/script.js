@@ -13,6 +13,10 @@ $(document).ready(function () {
         $('.zoom').fadeIn(3000);
     }, 3000);
 
+    // Logo fade in
+    $('#logo').fadeIn(1000, function () {
+        $(this).animate({ "left": "35px" }, 2000);
+    });
 
 
     // hide cars image when open description

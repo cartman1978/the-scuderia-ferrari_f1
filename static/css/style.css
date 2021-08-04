@@ -59,11 +59,13 @@ nav, .nav-link:hover {
 }
 
 #logo {
+    display: none;
+    position: absolute;
     margin: 1rem;
 }
 
 .brand-logo {
-    margin-left: 7rem;
+    margin-left: 9rem;
     font-family: 'Pacifico', cursive;
 }
 
