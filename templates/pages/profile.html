@@ -58,23 +58,24 @@
                             <p><em>Created by: {{ car.created_by }}</em></p>
                         </div>
                     </div>
-                    <ul class="collapsible">
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons">Description</i> <i
-                                    class="fas fa-plus"></i><i class="fas fa-minus"></i></div>
+                    <ul class=" collapsible">
+                        <li class="test">
+                            <div class="collapsible-header"><i class="material-icons" id="description">Description
+
+                                </i><i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+
+                            </div>
                             <div class="collapsible-body"><span>{{ car.description }}</span></div>
                         </li>
-
-
                     </ul>
+
 
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <a href="{{ url_for('editcar', car_id=car._id) }}" class="waves-effect btn-small"
                             id="edit-btn"><i class="far fa-edit"></i> Edit</a>
                         <a href="#delete-car-modal" title="Delete dog profile"
-                            class="waves-effect btn-small modal-trigger" id="delete-btn"><i
-                                class="material-icons icons">delete</i></a>
+                            class="waves-effect btn-small modal-trigger" id="delete-btn">delete</a>
                         {% include 'components/modals/confirm.html' %}
 
                     </div>

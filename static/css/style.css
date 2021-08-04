@@ -319,8 +319,18 @@ p {
 .multiCol {
     color: var(--yellow);
     font-weight: 700;
-    transform: scale(1);
-    transition: all 1s;
+    transform: rotateX(10deg);
+    animation: one 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes multiCol {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(20deg);
+    }
 }
 
 /* Media queries */
