@@ -30,7 +30,7 @@ setInterval(function () {
     $($descriptions[i]).addClass('multiCol');
     i++;
     if (i === $descriptions.length) i = 0;
-}, 500)
+}, 700)
 
 jQuery(function ($) {
     $('.textillate-5').textillate({

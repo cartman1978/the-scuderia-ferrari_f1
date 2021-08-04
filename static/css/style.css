@@ -319,6 +319,8 @@ p {
 .multiCol {
     color: var(--yellow);
     font-weight: 700;
+    transform: scale(1);
+    transition: all 1s;
 }
 
 /* Media queries */
