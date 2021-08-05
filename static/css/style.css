@@ -311,6 +311,7 @@ p {
 .input-field.col label {
     color: var(--red);
     font-weight: 700;
+    font-size: 1.4rem;
 }
 
 #row-form {
@@ -318,7 +319,7 @@ p {
 }
 
 .multiCol {
-    color: var(--yellow);
+    color: var(--white);
     font-weight: 700;
     transform: rotateX(10deg);
     animation: one 2s infinite;
@@ -332,6 +333,10 @@ p {
     100% {
         transform: rotateX(20deg);
     }
+}
+
+#log-in {
+    color: var(--yellow);
 }
 
 /* Media queries */
@@ -387,12 +392,12 @@ p {
         margin-left: 24rem;
         height: 3.5rem;
     }
+    .input-field.col label {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-    .input-field.col label {
-        font-size: 1.5rem;
-    }
     #err-img {
         max-height: 55rem;
     }
