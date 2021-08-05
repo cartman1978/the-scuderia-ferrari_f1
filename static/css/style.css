@@ -131,7 +131,7 @@ h3, .profileHeader {
 }
 
 #driver-list {
-    margin-left: 0.9rem;
+    margin-left: 1rem;
 }
 
 #edit-btn {
@@ -299,7 +299,7 @@ strong {
     color: var(--white);
     border-radius: 1.3rem;
     padding: 4px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 p {
@@ -394,6 +394,9 @@ p {
     }
     .input-field.col label {
         font-size: 0.9rem;
+    }
+    strong {
+        font-size: 1.1rem;
     }
 }
 
