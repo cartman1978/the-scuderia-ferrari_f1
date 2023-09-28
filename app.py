@@ -29,7 +29,7 @@ from models import User, Car
 
 @app.route("/")
 def get_cars():
-    cars = Car.query.order_by(desc(Car.id)).all()
+    cars = Car.query.order_by(Car.car_year).all()
     return render_template("pages/cars.html", cars=cars)
 
 
