@@ -7,7 +7,7 @@
 
 <div class="container">
     <div class="row card-panel">
-        <form class="col s12" method="POST" action="{{ url_for('editcar', car_id=car._id) }}">
+        <form class="col s12" method="POST" action="{{ url_for('editcar', car_id=car.id) }}">
             <div class="row">
                 <div class="input-field col s6">
                     <label for="car_year" class="form-label">Year</label>

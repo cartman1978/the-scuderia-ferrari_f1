@@ -5,8 +5,8 @@
     </div>
     <div class="modal-footer">
         <div class="col s12 center-align">
-            <a href="{{ url_for('get_cars', car_id=car._id) }}" class="waves-effect btn-small" id="edit-btn">Return</a>
-            <a href="{{ url_for('deletecar', car_id=car._id) }}" class="waves-effect btn-small" id="edit-btn">Delete</a>
+            <a href="{{ url_for('get_cars', car_id=car.id) }}" class="waves-effect btn-small" id="edit-btn">Return</a>
+            <a href="{{ url_for('deletecar', car_id=car.id) }}" class="waves-effect btn-small" id="edit-btn">Delete</a>
         </div>
     </div>
 </div>
